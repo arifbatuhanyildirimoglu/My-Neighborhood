@@ -1,0 +1,414 @@
+Using pre-set license
+Built from '2020.3/staging' branch; Version is '2020.3.26f1 (7298b473bc1a) revision 7510196'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19044) 64bit Professional' Language: 'tr' Physical Memory: 16334 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.3.26f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/arifb/OneDrive/Belgeler/GitHub/My-Neighborhood/My Neighborhood
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+50241
+Successfully changed project path to: C:/Users/arifb/OneDrive/Belgeler/GitHub/My-Neighborhood/My Neighborhood
+C:/Users/arifb/OneDrive/Belgeler/GitHub/My-Neighborhood/My Neighborhood
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 34.09 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.26f1 (7298b473bc1a)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.26f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/arifb/OneDrive/Belgeler/GitHub/My-Neighborhood/My Neighborhood/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: AMD Radeon RX 5700 (ID=0x731f)
+    Vendor:   
+    VRAM:     8151 MB
+    Driver:   30.0.15021.7000
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.26f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.26f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.26f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56640
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.26f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.26f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002259 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 30.68 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.515 seconds
+Domain Reload Profiling:
+	ReloadAssembly (515ms)
+		BeginReloadAssembly (56ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (389ms)
+			LoadAssemblies (54ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (134ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (26ms)
+			SetupLoadedEditorAssemblies (139ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (31ms)
+				BeforeProcessingInitializeOnLoad (11ms)
+				ProcessInitializeOnLoadAttributes (68ms)
+				ProcessInitializeOnLoadMethodAttributes (23ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.003983 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.43 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.852 seconds
+Domain Reload Profiling:
+	ReloadAssembly (853ms)
+		BeginReloadAssembly (127ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (18ms)
+		EndReloadAssembly (669ms)
+			LoadAssemblies (72ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (233ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (35ms)
+			SetupLoadedEditorAssemblies (250ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (77ms)
+				ProcessInitializeOnLoadAttributes (155ms)
+				ProcessInitializeOnLoadMethodAttributes (7ms)
+				AfterProcessingInitializeOnLoad (6ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 0.43 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1503 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 68.6 MB.
+System memory in use after: 68.7 MB.
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 1935.
+Total: 2.698400 ms (FindLiveObjects: 0.142000 ms CreateObjectMapping: 0.033800 ms MarkObjects: 2.456400 ms  DeleteObjects: 0.065100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  path: Assets/Viuletti City low poly/DemoScene/SampleScene.unity
+  artifactKey: Guid(99c9720ab356a0642a771bea13969a05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Viuletti City low poly/DemoScene/SampleScene.unity using Guid(99c9720ab356a0642a771bea13969a05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6cbfc3bf954056dfd6336096a5c415e8') in 0.017039 seconds 
+  Import took 0.019468 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 54.633568 seconds.
+  path: Assets/Scenes/SampleScene.unity
+  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/SampleScene.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85059f4f9e1a832ed95adaa0d25c5c4c') in 0.006640 seconds 
+  Import took 0.009112 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.748572 seconds.
+  path: Assets/Viuletti City low poly/Models/Nature
+  artifactKey: Guid(f8c24c4df150a9745830e575877e4fb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Viuletti City low poly/Models/Nature using Guid(f8c24c4df150a9745830e575877e4fb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5a9952d16c3e7c9cb9ea0d58da5329c') in 0.011305 seconds 
+  Import took 0.013686 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.607223 seconds.
+  path: Assets/Viuletti City low poly/Models/Roads
+  artifactKey: Guid(6e16d918fe7139243bf80585cf3def9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Viuletti City low poly/Models/Roads using Guid(6e16d918fe7139243bf80585cf3def9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9cb29f96da53957b54f87a92b5c9a946') in 0.009715 seconds 
+  Import took 0.012149 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.186765 seconds.
+  path: Assets/Viuletti City low poly/Models/Nature/Empty ground clean.fbx
+  artifactKey: Guid(7decb8c0b6b53b443a60404984e3c804) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Viuletti City low poly/Models/Nature/Empty ground clean.fbx using Guid(7decb8c0b6b53b443a60404984e3c804) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d9e25d08b26136202deed66d57702e6') in 0.250070 seconds 
+  Import took 0.252598 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.073170 seconds.
+  path: Assets/Viuletti City low poly/Models/Nature/Empty ground.fbx
+  artifactKey: Guid(45de768c225f1bb4f99b6dce8cd21d20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Viuletti City low poly/Models/Nature/Empty ground.fbx using Guid(45de768c225f1bb4f99b6dce8cd21d20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e8ed290504211c4dbd62882461a35abd') in 0.026329 seconds 
+  Import took 0.028848 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.523904 seconds.
+  path: Assets/Viuletti City low poly/Models/Nature/Rock big.fbx
+  artifactKey: Guid(abd1a9bd4eaa3c74fbffe1db3d4ab74a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Viuletti City low poly/Models/Nature/Rock big.fbx using Guid(abd1a9bd4eaa3c74fbffe1db3d4ab74a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06b7d66213a36f0cfb01542228887ac4') in 0.021656 seconds 
+  Import took 0.024240 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.031634 seconds.
+  path: Assets/Viuletti City low poly/Models/Nature/Rock flat.fbx
+  artifactKey: Guid(da2bc031e35961f4a9befcfbc8fafee5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Viuletti City low poly/Models/Nature/Rock flat.fbx using Guid(da2bc031e35961f4a9befcfbc8fafee5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de7c296ab6e08bd366ad8f09aa4ade20') in 0.014831 seconds 
+  Import took 0.017550 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.483560 seconds.
+  path: Assets/Viuletti City low poly/Models/Nature/Rock pile.fbx
+  artifactKey: Guid(e55b12c1f5fa920428d5ef4036abdb60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Viuletti City low poly/Models/Nature/Rock pile.fbx using Guid(e55b12c1f5fa920428d5ef4036abdb60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc160462b6a829ff0a19c0fdc61fd8b8') in 0.013749 seconds 
+  Import took 0.016379 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.115121 seconds.
+  path: Assets/Viuletti City low poly/Models/Nature/Rock slide.fbx
+  artifactKey: Guid(a12bcd63725cb7c4f99e98e0fd6d6c5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Viuletti City low poly/Models/Nature/Rock slide.fbx using Guid(a12bcd63725cb7c4f99e98e0fd6d6c5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76addd2c3ed7bab8c41e10d800cc2bb0') in 0.014800 seconds 
+  Import took 0.017417 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.118103 seconds.
+  path: Assets/Viuletti City low poly/Models/Roads/Height parking lot 15.fbx
+  artifactKey: Guid(fef81c27bb18d2041aff0a567c11b1b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Viuletti City low poly/Models/Roads/Height parking lot 15.fbx using Guid(fef81c27bb18d2041aff0a567c11b1b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '373d014cc2cceabd896530e71041a689') in 0.020489 seconds 
+  Import took 0.023099 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.269650 seconds.
+  path: Assets/Viuletti City low poly/Models/Roads/Height Road crossing.fbx
+  artifactKey: Guid(f52618d0451aaf248a6f940e54dd2ddd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Viuletti City low poly/Models/Roads/Height Road crossing.fbx using Guid(f52618d0451aaf248a6f940e54dd2ddd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '881ce7d2485194c8d56b8fa7083bcb53') in 0.020639 seconds 
+  Import took 0.024024 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.521516 seconds.
+  path: Assets/Viuletti City low poly/Models/Roads/Height Road straight.fbx
+  artifactKey: Guid(161dbbb4309c9eb4081f7e6636fbf826) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Viuletti City low poly/Models/Roads/Height Road straight.fbx using Guid(161dbbb4309c9eb4081f7e6636fbf826) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '30f4820d180124c8c57bb3be843abcfd') in 0.021859 seconds 
+  Import took 0.024487 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.355374 seconds.
+  path: Assets/Viuletti City low poly/Models/Roads/Height Road T crossing.fbx
+  artifactKey: Guid(d7f4ffb7c4e5d04458f7fb8aa3a03ffe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Viuletti City low poly/Models/Roads/Height Road T crossing.fbx using Guid(d7f4ffb7c4e5d04458f7fb8aa3a03ffe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e9222212b53fa1a73e64b76d5826316') in 0.022510 seconds 
+  Import took 0.025067 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.369848 seconds.
+  path: Assets/Viuletti City low poly/Models/Roads/Height Road turn.fbx
+  artifactKey: Guid(fe70c4b6f0e82334ab55dca6f225aac8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Viuletti City low poly/Models/Roads/Height Road turn.fbx using Guid(fe70c4b6f0e82334ab55dca6f225aac8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fcc9f638f23ce23832de910f145bb7bf') in 0.020411 seconds 
+  Import took 0.023196 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1259.115400 seconds.
+  path: Assets/Viuletti City low poly/Models/Buildings/Apartments.fbx
+  artifactKey: Guid(0ae8d45dc8f27d544820653040a3b108) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Viuletti City low poly/Models/Buildings/Apartments.fbx using Guid(0ae8d45dc8f27d544820653040a3b108) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3aff436eea931e79cc492f51c84fa4f') in 0.047019 seconds 
+  Import took 0.050187 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.467457 seconds.
+  path: Assets/Viuletti City low poly/Models/Buildings/Bank.fbx
+  artifactKey: Guid(3eedb57cbe6114a488fee637e97b46d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Viuletti City low poly/Models/Buildings/Bank.fbx using Guid(3eedb57cbe6114a488fee637e97b46d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd99a24ddffab07ff8900eadb3a181f40') in 0.056765 seconds 
+  Import took 0.059475 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.080519 seconds.
+  path: Assets/Viuletti City low poly/Models/Buildings/Building two color.fbx
+  artifactKey: Guid(c129f22187ea2494384ee89fedf8bcd4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Viuletti City low poly/Models/Buildings/Building two color.fbx using Guid(c129f22187ea2494384ee89fedf8bcd4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45af232079973893d173fdc682876cd6') in 0.044829 seconds 
+  Import took 0.047567 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 14.424933 seconds.
+  path: Assets/Viuletti City low poly/Models/Buildings/Building with antenna.fbx
+  artifactKey: Guid(0dd3aa5743d43e64d9f8693bd3d26b20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Viuletti City low poly/Models/Buildings/Building with antenna.fbx using Guid(0dd3aa5743d43e64d9f8693bd3d26b20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '74e518bfc3556934d9f5dfd00740ad97') in 0.037587 seconds 
+  Import took 0.040297 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.862112 seconds.
+  path: Assets/Viuletti City low poly/Models/Buildings/Glass building.fbx
+  artifactKey: Guid(f7227eae54e4e7a42a93c459a6f492d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Viuletti City low poly/Models/Buildings/Glass building.fbx using Guid(f7227eae54e4e7a42a93c459a6f492d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c7b276d6069f9c28f934a419a1e0e93') in 0.037466 seconds 
+  Import took 0.040116 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.670394 seconds.
+  path: Assets/Viuletti City low poly/Models/Buildings/High building 2.fbx
+  artifactKey: Guid(1b9a1d1146c2ba84c98a594645ccfef5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Viuletti City low poly/Models/Buildings/High building 2.fbx using Guid(1b9a1d1146c2ba84c98a594645ccfef5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'beabb64844dda8f6a35becbef5591bd0') in 0.027200 seconds 
+  Import took 0.029990 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.614416 seconds.
+  path: Assets/Viuletti City low poly/Models/Buildings/High building.fbx
+  artifactKey: Guid(e766523a067ed0d4f9030b8b18738776) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Viuletti City low poly/Models/Buildings/High building.fbx using Guid(e766523a067ed0d4f9030b8b18738776) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '726bf727c9d76a53797750461ff15ef4') in 0.043186 seconds 
+  Import took 0.045843 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.827392 seconds.
+  path: Assets/Viuletti City low poly/Models/Buildings/High Office Building.fbx
+  artifactKey: Guid(92cc875d3c4fd304b91000f1d0550900) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Viuletti City low poly/Models/Buildings/High Office Building.fbx using Guid(92cc875d3c4fd304b91000f1d0550900) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '07da1687939134dfcaa4fb2e51f3c13e') in 0.026103 seconds 
+  Import took 0.028883 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.246172 seconds.
+  path: Assets/Viuletti City low poly/Models/Buildings/Outside storage.fbx
+  artifactKey: Guid(d8fae8e9712ff014b96d3711a65b15b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Viuletti City low poly/Models/Buildings/Outside storage.fbx using Guid(d8fae8e9712ff014b96d3711a65b15b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0943dbcfd42f35babf946b71fd979e6b') in 0.026672 seconds 
+  Import took 0.029429 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.972865 seconds.
+  path: Assets/Viuletti City low poly/Models/Buildings/Shop.fbx
+  artifactKey: Guid(b53f68fe839b7af4b9e50bdc68a2e20a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Viuletti City low poly/Models/Buildings/Shop.fbx using Guid(b53f68fe839b7af4b9e50bdc68a2e20a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47ac1b8a45b0d8e0f3e0b9303e652aa6') in 0.035690 seconds 
+  Import took 0.038380 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1182.475351 seconds.
+  path: Assets/Viuletti City low poly/Models/Buildings/Small building.fbx
+  artifactKey: Guid(08020721d3403914cb7eb4fcf3a5dad7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Viuletti City low poly/Models/Buildings/Small building.fbx using Guid(08020721d3403914cb7eb4fcf3a5dad7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '50a1e98017b789e5600045a1994a5b23') in 0.031926 seconds 
+  Import took 0.034968 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.047663 seconds.
+  path: Assets/Viuletti City low poly/Models/Buildings/Store.fbx
+  artifactKey: Guid(7f28847801426794dbdb6eba4fa66cea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Viuletti City low poly/Models/Buildings/Store.fbx using Guid(7f28847801426794dbdb6eba4fa66cea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7009c4a3335fb06fb301be2e418cbfb5') in 0.051376 seconds 
+  Import took 0.054064 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.471159 seconds.
+  path: Assets/Viuletti City low poly/Models/Buildings/Warehouse long.fbx
+  artifactKey: Guid(dc5697a1a809b5841b8e68181d3c0423) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Viuletti City low poly/Models/Buildings/Warehouse long.fbx using Guid(dc5697a1a809b5841b8e68181d3c0423) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9bef2e2b0121facfcc559f338c6eb46') in 0.032215 seconds 
+  Import took 0.034891 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.494405 seconds.
+  path: Assets/Viuletti City low poly/Models/Buildings/Warehouse.fbx
+  artifactKey: Guid(72cf21009c6fa5143a0d773dd368c3f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Viuletti City low poly/Models/Buildings/Warehouse.fbx using Guid(72cf21009c6fa5143a0d773dd368c3f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '627969ff64b76aceef3957f140bc8a8d') in 0.028116 seconds 
+  Import took 0.030826 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 72.732548 seconds.
+  path: Assets/Viuletti City low poly/Prefabs/Buildings/Outside storage.prefab
+  artifactKey: Guid(89f0268b869809841b9a32b72053e107) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Viuletti City low poly/Prefabs/Buildings/Outside storage.prefab using Guid(89f0268b869809841b9a32b72053e107) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1eae9079621eb406b512049ac87118e1') in 0.012020 seconds 
+  Import took 0.014927 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.149043 seconds.
+  path: Assets/Viuletti City low poly/Prefabs/Buildings/Shop.prefab
+  artifactKey: Guid(2909343e8fc65984b82bff9fab8cf5d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Viuletti City low poly/Prefabs/Buildings/Shop.prefab using Guid(2909343e8fc65984b82bff9fab8cf5d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c9928fb1459b29d876dd015ca502a72') in 0.011776 seconds 
+  Import took 0.014634 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.121954 seconds.
+  path: Assets/Viuletti City low poly/Prefabs/Buildings/Small building.prefab
+  artifactKey: Guid(31d5af46872794c47831f7a6da72a909) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Viuletti City low poly/Prefabs/Buildings/Small building.prefab using Guid(31d5af46872794c47831f7a6da72a909) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '404b5855b21241f65bdb8dda960ac59a') in 0.010880 seconds 
+  Import took 0.013585 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.400296 seconds.
+  path: Assets/Viuletti City low poly/Prefabs/Buildings/Store.prefab
+  artifactKey: Guid(df93f3d6378363547a6e517b28966afd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Viuletti City low poly/Prefabs/Buildings/Store.prefab using Guid(df93f3d6378363547a6e517b28966afd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6dbef1707dd08197f3cc206ba3ba9c47') in 0.013251 seconds 
+  Import took 0.016082 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.822567 seconds.
+  path: Assets/Viuletti City low poly/Prefabs/Buildings/Warehouse long.prefab
+  artifactKey: Guid(de4ee8b58db0a0f4d96175ffd1f29120) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Viuletti City low poly/Prefabs/Buildings/Warehouse long.prefab using Guid(de4ee8b58db0a0f4d96175ffd1f29120) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9a3ac87f89a516ca430462ffe94fb82') in 0.010401 seconds 
+  Import took 0.013306 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.314317 seconds.
+  path: Assets/Viuletti City low poly/Prefabs/Buildings/Warehouse.prefab
+  artifactKey: Guid(cbb2baf7f26aed649a2393144227a562) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Viuletti City low poly/Prefabs/Buildings/Warehouse.prefab using Guid(cbb2baf7f26aed649a2393144227a562) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08511386b093ea2c50985778aa9d08a1') in 0.011019 seconds 
+  Import took 0.013797 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
