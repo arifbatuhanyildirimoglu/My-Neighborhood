@@ -302,6 +302,9 @@
  <Reference Include="Unity.Plastic.Antlr3.Runtime">
  <HintPath>C:/Users/arifb/OneDrive/Belgeler/GitHub/My-Neighborhood/My Neighborhood/Library/PackageCache/com.unity.collab-proxy@1.15.7/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll</HintPath>
  </Reference>
+ <Reference Include="DOTween">
+ <HintPath>C:/Users/arifb/OneDrive/Belgeler/GitHub/My-Neighborhood/My Neighborhood/Assets/DOTween/DOTween.dll</HintPath>
+ </Reference>
  <Reference Include="unityplastic">
  <HintPath>C:/Users/arifb/OneDrive/Belgeler/GitHub/My-Neighborhood/My Neighborhood/Library/PackageCache/com.unity.collab-proxy@1.15.7/Lib/Editor/PlasticSCM/unityplastic.dll</HintPath>
  </Reference>
@@ -310,9 +313,6 @@
  </Reference>
  <Reference Include="Newtonsoft.Json">
  <HintPath>C:/Users/arifb/OneDrive/Belgeler/GitHub/My-Neighborhood/My Neighborhood/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
- </Reference>
- <Reference Include="DOTween">
- <HintPath>C:/Users/arifb/OneDrive/Belgeler/GitHub/My-Neighborhood/My Neighborhood/Assets/DOTween/DOTween.dll</HintPath>
  </Reference>
  <Reference Include="DOTweenEditor">
  <HintPath>C:/Users/arifb/OneDrive/Belgeler/GitHub/My-Neighborhood/My Neighborhood/Assets/DOTween/Editor/DOTweenEditor.dll</HintPath>
