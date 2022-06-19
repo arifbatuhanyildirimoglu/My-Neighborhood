@@ -19,11 +19,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        //TODO: joystick ile y ekseninde döndürme yapılacak.
-        //TODO: transform.forward yönünde speed hızında translate edilecek.
-
-
+        
     }
 
     void FixedUpdate(){

@@ -8,4 +8,10 @@ public abstract class Building : MonoBehaviour
     protected float amount;
 
     protected abstract void MakeMoney(float duration, float amount);
+
+    public bool IsOwned
+    {
+        get => isOwned;
+        set => isOwned = value;
+    }
 }
