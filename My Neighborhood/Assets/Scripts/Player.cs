@@ -16,7 +16,6 @@ public class Player : MonoBehaviour
     
     private Player(){}
     
-    // Start is called before the first frame update
     void Start()
     {
 
@@ -25,7 +24,6 @@ public class Player : MonoBehaviour
         _budget = 15000;
     }
 
-    // Update is called once per frame
     void Update()
     {
         

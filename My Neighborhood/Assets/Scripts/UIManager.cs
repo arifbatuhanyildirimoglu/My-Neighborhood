@@ -22,13 +22,11 @@ public class UIManager : MonoBehaviour
     
     private UIManager(){}
     
-    // Start is called before the first frame update
     void Start()
     {
         Instance = this;
     }
 
-    // Update is called once per frame
     void Update()
     {
         budgetText.text = Player.Instance.Budget.ToString();

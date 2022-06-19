@@ -8,7 +8,6 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
     [SerializeField] private Joystick joystick;
 
-    // Start is called before the first frame update
     void Start()
     {
         speed = 5f;
@@ -16,7 +15,6 @@ public class PlayerController : MonoBehaviour
         animator = transform.GetChild(0).GetComponent<Animator>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         /*
@@ -36,16 +34,18 @@ public class PlayerController : MonoBehaviour
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
 
+            GameObject buildingInfoBox = UIManager.Instance.BuildingInfoBox;
+
             if (Physics.Raycast(ray, out hit))
             {
                 Debug.DrawLine(ray.origin, hit.transform.position, Color.red);
 
                 if (hit.transform.CompareTag("Building"))
                 {
-                    GameObject buildingInfoBox = UIManager.Instance.BuildingInfoBox;
+                    
                     GameObject building = hit.transform.gameObject;
                     GameObject purchasingElements = buildingInfoBox.transform.GetChild(3).gameObject;
-                    
+
                     buildingInfoBox.SetActive(true);
 
                     buildingInfoBox.transform.GetChild(1).GetComponent<Text>().text =
@@ -55,7 +55,7 @@ public class PlayerController : MonoBehaviour
                     {
                         purchasingElements.SetActive(true);
                         purchasingElements.transform.GetChild(1).GetComponent<Text>().text = building
-                            .GetComponent<Building>().PurchasePrice + "$";    
+                            .GetComponent<Building>().PurchasePrice + "$";
                     }
                     else
                     {
@@ -65,6 +65,14 @@ public class PlayerController : MonoBehaviour
                     UIManager.Instance.CurrentlyObservedBuilding = building;
 
                 }
+                else
+                {
+                    buildingInfoBox.SetActive(false);
+                }
+            }
+            else
+            {
+                buildingInfoBox.SetActive(false);
             }
         }
     }

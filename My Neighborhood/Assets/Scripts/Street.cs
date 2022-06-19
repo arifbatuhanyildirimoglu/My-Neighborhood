@@ -7,13 +7,11 @@ public class Street : MonoBehaviour
     [SerializeField]private List<Building> buildings;
     private float _ownRate;
     
-    // Start is called before the first frame update
     void Start()
     {
         _ownRate = CalculateOwnRate();
     }
 
-    // Update is called once per frame
     void Update()
     {
         CalculateOwnRate();

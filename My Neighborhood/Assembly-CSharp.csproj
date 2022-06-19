@@ -78,6 +78,16 @@
      <Compile Include="Assets\Scripts\Warehouse.cs" />
      <Compile Include="Assets\Scripts\GameCompany.cs" />
      <Compile Include="Assets\Scripts\Street.cs" />
+     <Compile Include="Assets\Scripts\CameraFollower.cs" />
+     <Compile Include="Assets\DOTween\Modules\DOTweenModuleAudio.cs" />
+     <Compile Include="Assets\DOTween\Modules\DOTweenModuleUtils.cs" />
+     <Compile Include="Assets\DOTween\Modules\DOTweenModuleSprite.cs" />
+     <Compile Include="Assets\DOTween\Modules\DOTweenModulePhysics2D.cs" />
+     <Compile Include="Assets\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
+     <Compile Include="Assets\DOTween\Modules\DOTweenModuleEPOOutline.cs" />
+     <Compile Include="Assets\DOTween\Modules\DOTweenModuleUI.cs" />
+     <Compile Include="Assets\DOTween\Modules\DOTweenModulePhysics.cs" />
+     <None Include="Assets\DOTween\readme.txt" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.26f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
@@ -302,6 +312,9 @@
  </Reference>
  <Reference Include="Newtonsoft.Json">
  <HintPath>C:/Users/arifb/OneDrive/Belgeler/GitHub/My-Neighborhood/My Neighborhood/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTween">
+ <HintPath>C:/Users/arifb/OneDrive/Belgeler/GitHub/My-Neighborhood/My Neighborhood/Assets/DOTween/DOTween.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.26f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>

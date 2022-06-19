@@ -4,19 +4,17 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    private GameState currentState;
     
-    
-    
-    // Start is called before the first frame update
     void Start()
     {
+        //TODO: Eğer cihazda veri saklanmışsa first start değildir, değilse first starttır   
         
+
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
     }
 }
 

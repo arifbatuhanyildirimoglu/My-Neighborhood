@@ -8,14 +8,12 @@ public class Grocery : Building
     private Dictionary<Item, int> _stock;
     
     
-    // Start is called before the first frame update
     void Start()
     {
         name = "Grocery";
         isOwned = true;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (isOwned && !isMakingMoney)

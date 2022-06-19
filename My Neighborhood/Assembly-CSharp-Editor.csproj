@@ -311,6 +311,12 @@
  <Reference Include="Newtonsoft.Json">
  <HintPath>C:/Users/arifb/OneDrive/Belgeler/GitHub/My-Neighborhood/My Neighborhood/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
  </Reference>
+ <Reference Include="DOTween">
+ <HintPath>C:/Users/arifb/OneDrive/Belgeler/GitHub/My-Neighborhood/My Neighborhood/Assets/DOTween/DOTween.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTweenEditor">
+ <HintPath>C:/Users/arifb/OneDrive/Belgeler/GitHub/My-Neighborhood/My Neighborhood/Assets/DOTween/Editor/DOTweenEditor.dll</HintPath>
+ </Reference>
  <Reference Include="nunit.framework">
  <HintPath>C:/Users/arifb/OneDrive/Belgeler/GitHub/My-Neighborhood/My Neighborhood/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll</HintPath>
  </Reference>

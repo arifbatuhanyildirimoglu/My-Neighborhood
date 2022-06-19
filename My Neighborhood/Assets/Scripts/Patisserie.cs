@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class Patisserie : Building
 {
-    // Start is called before the first frame update
     void Start()
     {
         name = "Patisserie";
         purchasePrice = 70000;
+        amount = 15;
+        duration = 5;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (isOwned && !isMakingMoney)
