@@ -39,8 +39,8 @@ public class UIManager : MonoBehaviour
 
         GameObject purchasingElements = buildingInfoBox.transform.GetChild(3).gameObject;
         
-        Player.Instance.Purchase(CurrentlyObservedBuilding.GetComponent<Building>());
-        purchasingElements.SetActive(false);
+        if(Player.Instance.Purchase(CurrentlyObservedBuilding.GetComponent<Building>()))
+            purchasingElements.SetActive(false);
         
     }
 }

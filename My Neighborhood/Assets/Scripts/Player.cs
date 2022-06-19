@@ -31,11 +31,14 @@ public class Player : MonoBehaviour
         
     }
 
-    public void Purchase(Building building)
+    public bool Purchase(Building building)
     {
+        if (building.PurchasePrice > _budget)
+            return false;
         
         building.IsOwned = true;
         _budget -= building.PurchasePrice;
+        return true;
 
     }
 }

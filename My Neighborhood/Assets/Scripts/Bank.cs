@@ -15,11 +15,11 @@ public class Bank : Building
     // Update is called once per frame
     void Update()
     {
-        
+        if (isOwned && !isMakingMoney)
+        {
+            isMakingMoney = true;
+            StartCoroutine(MakeMoney(duration, amount));
+        }
     }
 
-    protected override void MakeMoney(float duration, float amount)
-    {
-        throw new System.NotImplementedException();
-    }
 }

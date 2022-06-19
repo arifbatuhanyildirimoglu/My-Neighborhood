@@ -9,16 +9,18 @@ public class Apartments : Building
     {
         name = "Apartments";
         purchasePrice = 120000;
+        amount = 10;
+        duration = 10;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (isOwned && !isMakingMoney)
+        {
+            isMakingMoney = true;
+            StartCoroutine(MakeMoney(duration, amount));
+        }
     }
 
-    protected override void MakeMoney(float duration, float amount)
-    {
-        throw new System.NotImplementedException();
-    }
 }

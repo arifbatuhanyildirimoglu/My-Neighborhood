@@ -15,11 +15,10 @@ public class BussinessCenter : Building
     // Update is called once per frame
     void Update()
     {
-        
-    }
-
-    protected override void MakeMoney(float duration, float amount)
-    {
-        throw new System.NotImplementedException();
+        if (isOwned && !isMakingMoney)
+        {
+            isMakingMoney = true;
+            StartCoroutine(MakeMoney(duration, amount));
+        }
     }
 }

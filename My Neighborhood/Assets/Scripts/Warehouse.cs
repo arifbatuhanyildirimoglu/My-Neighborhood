@@ -9,16 +9,18 @@ public class Warehouse : Building
     {
         name = "Warehouse";
         purchasePrice = 40000;
+        amount = 5;
+        duration = 15;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (isOwned && !isMakingMoney)
+        {
+            isMakingMoney = true;
+            StartCoroutine(MakeMoney(duration, amount));
+        }
     }
 
-    protected override void MakeMoney(float duration, float amount)
-    {
-        throw new System.NotImplementedException();
-    }
 }
