@@ -11,7 +11,8 @@ public class Grocery : Building
     // Start is called before the first frame update
     void Start()
     {
-        
+        name = "Grocery";
+        isOwned = true;
     }
 
     // Update is called once per frame

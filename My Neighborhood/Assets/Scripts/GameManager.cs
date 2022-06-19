@@ -19,3 +19,12 @@ public class GameManager : MonoBehaviour
         
     }
 }
+
+public enum GameState
+{
+    FirstStart,
+    Start,
+    Gameplay,
+    Pause,
+    End
+}
