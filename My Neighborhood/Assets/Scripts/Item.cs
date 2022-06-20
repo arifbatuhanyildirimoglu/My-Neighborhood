@@ -2,5 +2,6 @@
 
 public abstract class Item : MonoBehaviour
 {
-    private int purchasePrice;
+    protected int storePrice;
+    protected int groceryPrice;
 }

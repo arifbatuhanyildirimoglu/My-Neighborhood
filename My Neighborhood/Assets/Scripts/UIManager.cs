@@ -1,17 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
     public static UIManager Instance;
-    
+
+    [SerializeField] private GameObject infoPanel;
     [SerializeField]private GameObject buildingInfoBox;
     [SerializeField] private Text budgetText;
 
     private GameObject _currentlyObservedBuilding;
 
+
+    public GameObject InfoPanel => infoPanel;
     public GameObject BuildingInfoBox => buildingInfoBox;
 
     public GameObject CurrentlyObservedBuilding
@@ -40,5 +44,22 @@ public class UIManager : MonoBehaviour
         if(Player.Instance.Purchase(CurrentlyObservedBuilding.GetComponent<Building>()))
             purchasingElements.SetActive(false);
         
+    }
+
+    public void OnEnterButtonClicked()
+    {
+        
+        //TODO: ilgili scene' yükle
+        Debug.Log("sa");
+        SceneManager.LoadScene(CurrentlyObservedBuilding.name);
+
+    }
+
+    public void OnCrossButtonClicked()
+    {
+        
+        infoPanel.SetActive(false);
+        _currentlyObservedBuilding = null;
+
     }
 }
