@@ -13,7 +13,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{8b9c1fba-480c-fbae-ec0a-aec1d0ab5a24}</ProjectGuid>
+    <ProjectGuid>{36cfd82a-8cd1-98b9-1cf8-f160b356f88a}</ProjectGuid>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -53,40 +53,50 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\DynamicJoystick.cs" />
-     <Compile Include="Assets\Scripts\Factory.cs" />
-     <Compile Include="Assets\Scripts\Store.cs" />
+     <Compile Include="Assets\Scripts\Buildings\Factory.cs" />
+     <Compile Include="Assets\Scripts\Buildings\Store.cs" />
      <Compile Include="Assets\Joystick Pack\Scripts\Base\Joystick.cs" />
      <Compile Include="Assets\DOTween\Modules\DOTweenModulePhysics.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
-     <Compile Include="Assets\Scripts\CameraFollower.cs" />
+     <Compile Include="Assets\Scripts\Product\Carrot.cs" />
+     <Compile Include="Assets\Scripts\Camera\StreetCameraController.cs" />
      <Compile Include="Assets\DOTween\Modules\DOTweenModuleEPOOutline.cs" />
      <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FixedJoystick.cs" />
      <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
-     <Compile Include="Assets\Scripts\Grocery.cs" />
-     <Compile Include="Assets\Scripts\InternationalBank.cs" />
-     <Compile Include="Assets\Scripts\Storage.cs" />
+     <Compile Include="Assets\Scripts\Product\Cola.cs" />
+     <Compile Include="Assets\Scripts\Buildings\Grocery.cs" />
+     <Compile Include="Assets\Scripts\Buildings\InternationalBank.cs" />
+     <Compile Include="Assets\Scripts\Buildings\Storage.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\DOTween\Modules\DOTweenModuleUtils.cs" />
-     <Compile Include="Assets\Scripts\Stadium.cs" />
+     <Compile Include="Assets\Scripts\Product\Egg.cs" />
+     <Compile Include="Assets\Scripts\Buildings\Stadium.cs" />
      <Compile Include="Assets\Scripts\UIManager.cs" />
-     <Compile Include="Assets\Scripts\House.cs" />
+     <Compile Include="Assets\Scripts\Buildings\House.cs" />
      <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
-     <Compile Include="Assets\Scripts\Apartments.cs" />
+     <Compile Include="Assets\Scripts\Buildings\Apartments.cs" />
      <Compile Include="Assets\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
-     <Compile Include="Assets\Scripts\Item.cs" />
+     <Compile Include="Assets\Scripts\Product\Item.cs" />
      <Compile Include="Assets\DOTween\Modules\DOTweenModuleUI.cs" />
-     <Compile Include="Assets\Scripts\BussinessCenter.cs" />
-     <Compile Include="Assets\Scripts\Bank.cs" />
+     <Compile Include="Assets\Scripts\Buildings\BussinessCenter.cs" />
+     <Compile Include="Assets\Scripts\Buildings\Bank.cs" />
+     <Compile Include="Assets\Scripts\Product\Apple.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
-     <Compile Include="Assets\Scripts\Building.cs" />
-     <Compile Include="Assets\Scripts\Patisserie.cs" />
-     <Compile Include="Assets\Scripts\MediaCompany.cs" />
+     <Compile Include="Assets\Scripts\Buildings\Building.cs" />
+     <Compile Include="Assets\Scripts\Product\Beer.cs" />
+     <Compile Include="Assets\Scripts\Product\CannedFood.cs" />
+     <Compile Include="Assets\Scripts\Buildings\Patisserie.cs" />
+     <Compile Include="Assets\Scripts\Buildings\MediaCompany.cs" />
      <Compile Include="Assets\DOTween\Modules\DOTweenModuleSprite.cs" />
+     <Compile Include="Assets\Scripts\CartController.cs" />
+     <Compile Include="Assets\Scripts\Product\Avocado.cs" />
      <Compile Include="Assets\DOTween\Modules\DOTweenModuleAudio.cs" />
-     <Compile Include="Assets\Scripts\Warehouse.cs" />
-     <Compile Include="Assets\Scripts\GameCompany.cs" />
+     <Compile Include="Assets\Scripts\Buildings\Warehouse.cs" />
+     <Compile Include="Assets\Scripts\Buildings\GameCompany.cs" />
      <Compile Include="Assets\Scripts\Street.cs" />
      <Compile Include="Assets\DOTween\Modules\DOTweenModulePhysics2D.cs" />
+     <Compile Include="Assets\Scripts\Camera\GroceryCameraController.cs" />
+     <None Include="Assets\SupermarketInterior_v2\Shaders\sh_supermarket_advertising_anim_01.shader" />
      <None Include="Assets\DOTween\readme.txt" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.26f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
@@ -311,10 +321,10 @@
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.26f1/Editor/Data/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
  </Reference>
  <Reference Include="DOTween">
- <HintPath>C:/Users/Ata/Desktop/My Neighborhood/Assets/DOTween/DOTween.dll</HintPath>
+ <HintPath>C:/Users/Ata/Documents/GitHub/My-Neighborhood/Assets/DOTween/DOTween.dll</HintPath>
  </Reference>
  <Reference Include="Newtonsoft.Json">
- <HintPath>C:/Users/Ata/Desktop/My Neighborhood/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
+ <HintPath>C:/Users/Ata/Documents/GitHub/My-Neighborhood/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.26f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -668,34 +678,34 @@
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.26f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VSCode.Editor">
- <HintPath>C:/Users/Ata/Desktop/My Neighborhood/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+ <HintPath>C:/Users/Ata/Documents/GitHub/My-Neighborhood/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>C:/Users/Ata/Desktop/My Neighborhood/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>C:/Users/Ata/Documents/GitHub/My-Neighborhood/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VisualStudio.Editor">
- <HintPath>C:/Users/Ata/Desktop/My Neighborhood/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
+ <HintPath>C:/Users/Ata/Documents/GitHub/My-Neighborhood/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline.Editor">
- <HintPath>C:/Users/Ata/Desktop/My Neighborhood/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+ <HintPath>C:/Users/Ata/Documents/GitHub/My-Neighborhood/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline">
- <HintPath>C:/Users/Ata/Desktop/My Neighborhood/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+ <HintPath>C:/Users/Ata/Documents/GitHub/My-Neighborhood/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>C:/Users/Ata/Desktop/My Neighborhood/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>C:/Users/Ata/Documents/GitHub/My-Neighborhood/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
- <HintPath>C:/Users/Ata/Desktop/My Neighborhood/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <HintPath>C:/Users/Ata/Documents/GitHub/My-Neighborhood/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PlasticSCM.Editor">
- <HintPath>C:/Users/Ata/Desktop/My Neighborhood/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
+ <HintPath>C:/Users/Ata/Documents/GitHub/My-Neighborhood/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Rider.Editor">
- <HintPath>C:/Users/Ata/Desktop/My Neighborhood/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+ <HintPath>C:/Users/Ata/Documents/GitHub/My-Neighborhood/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>C:/Users/Ata/Desktop/My Neighborhood/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <HintPath>C:/Users/Ata/Documents/GitHub/My-Neighborhood/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

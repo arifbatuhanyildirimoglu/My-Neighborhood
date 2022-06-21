@@ -19,6 +19,8 @@ public class Player : MonoBehaviour
     void Start()
     {
 
+        DontDestroyOnLoad(gameObject);
+        
         Instance = this;
         
         _budget = 15000;
