@@ -6,13 +6,13 @@ using UnityEngine.SceneManagement;
 public class CartController : MonoBehaviour
 {
     private float speed;
-    private Rigidbody rigidbody;
+    private float _rotateSpeed;
     [SerializeField] private Joystick joystick;
 
     void Start()
     {
         speed = 5f;
-        rigidbody = GetComponent<Rigidbody>();
+        _rotateSpeed = 3f;
     }
 
     void Update()
@@ -22,12 +22,20 @@ public class CartController : MonoBehaviour
 
     void FixedUpdate()
     {
-        rigidbody.velocity = new Vector3(speed * joystick.Horizontal, rigidbody.velocity.y, speed * joystick.Vertical);
-
-        if (joystick.Vertical != 0 || joystick.Horizontal != 0)
+        
+        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Moved && joystick.Direction == Vector2.zero)
         {
-            transform.rotation = Quaternion.LookRotation(-rigidbody.velocity);
+
+            float touchX = Input.GetTouch(0).deltaPosition.x;
+            float touchY = Input.GetTouch(0).deltaPosition.y;
+
+            transform.Rotate(Vector3.up * touchX * Time.deltaTime * _rotateSpeed);
+            Camera.main.transform.Rotate(Vector3.left * touchY * _rotateSpeed * Time.deltaTime);
         }
         
+        if(joystick.Vertical > 0)
+            transform.position += -transform.forward * joystick.Vertical * speed * Time.deltaTime;
+        
     }
+    
 }

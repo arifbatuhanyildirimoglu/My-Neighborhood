@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Building
   - Cart
+  - FPS Character
   layers:
   - Default
   - TransparentFX

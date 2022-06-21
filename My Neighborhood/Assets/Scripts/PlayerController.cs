@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
             gameObject.transform.GetChild(0).gameObject.SetActive(false);
             this.enabled = false;
         }
-            
+
         /*
         if (Input.touchCount > 0)
         {
@@ -32,6 +32,63 @@ public class PlayerController : MonoBehaviour
         }
         */
 
+
+        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+
+            GameObject infoPanel = UIManager.Instance.InfoPanel;
+            GameObject buildingInfoBox = UIManager.Instance.BuildingInfoBox;
+
+            if (Physics.Raycast(ray, out hit) && UIManager.Instance.CurrentlyObservedBuilding == null)
+            {
+                Debug.DrawLine(ray.origin, hit.transform.position, Color.red);
+
+                if (hit.transform.CompareTag("Building"))
+                {
+                    GameObject building = hit.transform.gameObject;
+                    GameObject purchasingElements = buildingInfoBox.transform.GetChild(3).gameObject;
+                    GameObject enterButton = buildingInfoBox.transform.GetChild(4).gameObject;
+
+                    infoPanel.SetActive(true);
+
+                    buildingInfoBox.transform.GetChild(1).GetComponent<Text>().text =
+                        building.GetComponent<Building>().Name;
+
+                    if (!building.GetComponent<Building>().IsOwned)
+                    {
+                        purchasingElements.SetActive(true);
+                        purchasingElements.transform.GetChild(1).GetComponent<Text>().text = building
+                            .GetComponent<Building>().PurchasePrice + "$";
+                    }
+                    else
+                    {
+                        purchasingElements.SetActive(false);
+                    }
+
+
+                    string buildingName = building.gameObject.name;
+                    if (buildingName.Equals("Grocery") || buildingName.Equals("Store"))
+                    {
+                        enterButton.SetActive(true);
+                    }
+                    else
+                    {
+                        enterButton.SetActive(false);
+                    }
+
+                    UIManager.Instance.CurrentlyObservedBuilding = building;
+                }
+                else
+                {
+                    infoPanel.SetActive(false);
+                    UIManager.Instance.CurrentlyObservedBuilding = null;
+                }
+            }
+        }
+
+        /*
         if (Input.GetMouseButtonDown(0))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -86,15 +143,9 @@ public class PlayerController : MonoBehaviour
                     infoPanel.SetActive(false);
                     UIManager.Instance.CurrentlyObservedBuilding = null;
                 }
-            }/*
-            else
-            {
-                infoPanel.SetActive(false);
-                UIManager.Instance.CurrentlyObservedBuilding = null;
             }
-            */
             
-        }
+            */
     }
 
     void FixedUpdate()
