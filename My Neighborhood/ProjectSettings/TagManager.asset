@@ -7,6 +7,8 @@ TagManager:
   - Building
   - Cart
   - FPS Character
+  - Item
+  - Rear
   layers:
   - Default
   - TransparentFX

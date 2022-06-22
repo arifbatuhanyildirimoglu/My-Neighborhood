@@ -7,17 +7,29 @@ using UnityEngine.SceneManagement;
 public class Grocery : Building
 {
 
-    private Dictionary<Item, int> _stock;
+    public static Grocery Instance;
     
+    private Dictionary<string, int> _stock;
+    
+    
+    private Grocery(){}
     
     void Start()
     {
+        Instance = this;
         DontDestroyOnLoad(gameObject);
         
         name = "Grocery";
         isOwned = true;
 
-        _stock = new Dictionary<Item, int>();
+        _stock = new Dictionary<string, int>();
+        _stock.Add("Apple",0);
+        _stock.Add("Avocado",0);
+        _stock.Add("Beer",0);
+        _stock.Add("Canned Food",0);
+        _stock.Add("Carrot",0);
+        _stock.Add("Cola",0);
+        _stock.Add("Egg",0);
     }
 
     void Update()
@@ -35,18 +47,18 @@ public class Grocery : Building
         } 
     }
 
-    private void AddToStock(Item item, int amount)
+    private void AddToStock(string itemName, int amount)
     {
-        _stock.Add(item,amount);
+        _stock.Add(itemName,amount);
     }
 
-    private void AddToStock(Dictionary<Item, int> items)
+    private void AddToStock(Dictionary<string, int> items)
     {
 
-        foreach (Item item in items.Keys)
+        foreach (string itemName in items.Keys)
         {
             
-            _stock.Add(item, items[item]);
+            _stock.Add(itemName, items[itemName]);
             
         }
         
@@ -60,6 +72,12 @@ public class Grocery : Building
         
         
         
+    }
+
+    public Dictionary<string, int> Stock
+    {
+        get => _stock;
+        set => _stock = value;
     }
     
 }

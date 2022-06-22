@@ -43,7 +43,6 @@ public class PlayerController : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit) && UIManager.Instance.CurrentlyObservedBuilding == null)
             {
-                Debug.DrawLine(ray.origin, hit.transform.position, Color.red);
 
                 if (hit.transform.CompareTag("Building"))
                 {

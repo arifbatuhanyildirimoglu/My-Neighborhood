@@ -8,6 +8,7 @@ public class StoreManager : MonoBehaviour
     public static StoreManager Instance;
     
     [SerializeField] private GameObject cart;
+    private Dictionary<string, int> itemList;
 
 
     private StoreManager(){}
@@ -16,6 +17,7 @@ public class StoreManager : MonoBehaviour
     void Start()
     {
         Instance = this;
+        itemList = new Dictionary<string, int>();
     }
 
     // Update is called once per frame
@@ -25,4 +27,5 @@ public class StoreManager : MonoBehaviour
     }
 
     public GameObject Cart => cart;
+    public Dictionary<string, int> ItemList => itemList;
 }
