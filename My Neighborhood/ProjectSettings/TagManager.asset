@@ -9,6 +9,7 @@ TagManager:
   - FPS Character
   - Item
   - Rear
+  - Cashout
   layers:
   - Default
   - TransparentFX
