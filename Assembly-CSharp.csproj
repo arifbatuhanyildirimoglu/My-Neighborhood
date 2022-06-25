@@ -64,6 +64,7 @@
      <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FixedJoystick.cs" />
      <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
      <Compile Include="Assets\Scripts\Product\Cola.cs" />
+     <Compile Include="Assets\Scripts\Camera\GroceryCameraController.cs" />
      <Compile Include="Assets\Scripts\Buildings\Grocery.cs" />
      <Compile Include="Assets\Scripts\Buildings\InternationalBank.cs" />
      <Compile Include="Assets\Scripts\Buildings\Storage.cs" />
@@ -95,7 +96,8 @@
      <Compile Include="Assets\Scripts\Buildings\GameCompany.cs" />
      <Compile Include="Assets\Scripts\Street.cs" />
      <Compile Include="Assets\DOTween\Modules\DOTweenModulePhysics2D.cs" />
-     <Compile Include="Assets\Scripts\Camera\GroceryCameraController.cs" />
+     <Compile Include="Assets\Scripts\Grocery\Customer.cs" />
+     <Compile Include="Assets\Scripts\Grocery\GroceryManager.cs" />
      <None Include="Assets\SupermarketInterior_v2\Shaders\sh_supermarket_advertising_anim_01.shader" />
      <None Include="Assets\DOTween\readme.txt" />
  <Reference Include="UnityEngine">
