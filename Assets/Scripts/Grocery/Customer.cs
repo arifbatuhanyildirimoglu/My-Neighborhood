@@ -6,7 +6,8 @@ using UnityEngine.AI;
 public class Customer : MonoBehaviour{
     private NavMeshAgent navMeshAgent;
     private GroceryManager groceryManager;
-    public Transform targetPosition;
+    //[SerializeField] private Transform customerPosition;
+    public Vector3 targetPosition;
     void Start(){
         navMeshAgent = GetComponent<NavMeshAgent>();
     }
@@ -16,6 +17,10 @@ public class Customer : MonoBehaviour{
     {
         
         
+    }
+
+    public void GoToTargetPosition(Vector3 targetPosition){
+        navMeshAgent.SetDestination(targetPosition);
     }
 
 
