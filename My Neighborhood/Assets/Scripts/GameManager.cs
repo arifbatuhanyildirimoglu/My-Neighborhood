@@ -5,11 +5,22 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     private GameState currentState;
+    [SerializeField] private GameObject playerPrefab;
+    [SerializeField] private GameObject spawnPos;
     
     void Start()
     {
-        //TODO: Eğer cihazda veri saklanmışsa first start değildir, değilse first starttır   
+        //DontDestroyOnLoad(this);
+        if(GameObject.FindGameObjectWithTag("Player") == null)
+            Instantiate(playerPrefab, spawnPos.transform.position, Quaternion.identity);
+        else
+        {
+            GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
+            playerObject.GetComponent<PlayerController>().enabled = true;
+            playerObject.transform.GetChild(0).gameObject.SetActive(true);
+        }
         
+        //Debug.Log("sa");
 
     }
 

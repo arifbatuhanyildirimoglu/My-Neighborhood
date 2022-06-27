@@ -10,6 +10,10 @@ TagManager:
   - Item
   - Rear
   - Cashout
+  - Joystick
+  - Building Info Box
+  - Budget Text
+  - Info Panel
   layers:
   - Default
   - TransparentFX

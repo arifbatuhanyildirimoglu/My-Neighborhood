@@ -8,6 +8,7 @@ public class StoreManager : MonoBehaviour
     public static StoreManager Instance;
     
     [SerializeField] private GameObject cart;
+    [SerializeField] private List<GameObject> cartSlots;
     private Dictionary<string, int> _itemList;
 
 
@@ -28,4 +29,6 @@ public class StoreManager : MonoBehaviour
 
     public GameObject Cart => cart;
     public Dictionary<string, int> ItemList => _itemList;
+
+    public List<GameObject> CartSlots => cartSlots;
 }

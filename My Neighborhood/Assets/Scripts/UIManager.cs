@@ -30,7 +30,11 @@ public class UIManager : MonoBehaviour
     
     void Start()
     {
+        //DontDestroyOnLoad(this);
         Instance = this;
+        //infoPanel = GameObject.FindGameObjectWithTag("Info Panel");
+        //buildingInfoBox = GameObject.FindGameObjectWithTag("Building Info Box");
+        //budgetText = GameObject.FindGameObjectWithTag("Budget Text").GetComponent<Text>();
     }
 
     void Update()
@@ -50,6 +54,9 @@ public class UIManager : MonoBehaviour
 
     public void OnEnterButtonClicked()
     {
+        GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
+        playerObject.GetComponent<PlayerController>().enabled = false;
+        playerObject.transform.GetChild(0).gameObject.SetActive(false);
         
         SceneManager.LoadScene(CurrentlyObservedBuilding.name);
 
@@ -75,5 +82,12 @@ public class UIManager : MonoBehaviour
         {
             stockListDeneme.transform.GetChild(i).GetComponent<Text>().text = stock.Keys.ElementAt(i) + ": " + stock.Values.ElementAt(i);
         }
+    }
+
+    public void OnExitButtonClicked()
+    {
+
+        SceneManager.LoadScene("SampleScene");
+
     }
 }

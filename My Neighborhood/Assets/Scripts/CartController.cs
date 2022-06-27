@@ -77,45 +77,61 @@ public class CartController : MonoBehaviour
     private void AddItemToCart(RaycastHit hit)
     {
         GameObject item = hit.transform.gameObject;
+        bool isCartNotFull = false;
 
-        //Item'ı cartın içine koy ve onun child'ı yap
-        //Item'ı cart'a ekle liste olan karta.
-
-        item.transform.position = StoreManager.Instance.Cart.transform.position + Vector3.up * 2f;
-        item.GetComponent<Rigidbody>().useGravity = true;
-        //item.transform.SetParent(StoreManager.Instance.Cart.transform);
-
-        //TODO: cart hareket ettikçe item'lar içinden düşüyor. Bunu önlemek lazım.
-
-        string itemName;
-
-        if (item.name.Contains("("))
+        foreach (GameObject slot in StoreManager.Instance.CartSlots)
         {
-            itemName = item.name.Substring(0, item.name.IndexOf("(") - 1);
-        }
-        else
-        {
-            itemName = item.name;
-        }
 
-        //TODO: eğer listede key yoksa yeni ekle
-        //TODO: eğer varsa value'sunu 1 arttır
-        if (!StoreManager.Instance.ItemList.ContainsKey(itemName))
-        {
-            StoreManager.Instance.ItemList.Add(itemName, 1);
-        }
-        else
-        {
-            foreach (KeyValuePair<string, int> keyValuePair in StoreManager.Instance.ItemList)
+            if (slot.transform.childCount == 0)
             {
-                if (keyValuePair.Key.Equals(itemName))
+                isCartNotFull = true;
+            }
+            
+            if (slot.transform.childCount == 0)
+            {
+                item.transform.position = slot.transform.position;
+                item.transform.SetParent(slot.transform);
+                item.GetComponent<Item>().IsDeployedToCart = true;
+            }
+            
+        }
+
+        if (!isCartNotFull)
+        {
+            //TODO: daha fazla item alamazsınız.
+        }
+        
+        if (item.GetComponent<Item>().IsDeployedToCart)
+        {
+            string itemName;
+
+            if (item.name.Contains("("))
+            {
+                itemName = item.name.Substring(0, item.name.IndexOf("(") - 1);
+            }
+            else
+            {
+                itemName = item.name;
+            }
+            
+            if (!StoreManager.Instance.ItemList.ContainsKey(itemName))
+            {
+                StoreManager.Instance.ItemList.Add(itemName, 1);
+            }
+            else
+            {
+                foreach (KeyValuePair<string, int> keyValuePair in StoreManager.Instance.ItemList)
                 {
-                    int value = keyValuePair.Value;
-                    StoreManager.Instance.ItemList.Remove(itemName);
-                    StoreManager.Instance.ItemList.Add(itemName, value + 1);
-                    break;
+                    if (keyValuePair.Key.Equals(itemName))
+                    {
+                        int value = keyValuePair.Value;
+                        StoreManager.Instance.ItemList.Remove(itemName);
+                        StoreManager.Instance.ItemList.Add(itemName, value + 1);
+                        break;
+                    }
                 }
             }
         }
+        
     }
 }

@@ -14,25 +14,14 @@ public class PlayerController : MonoBehaviour
         speed = 5f;
         rigidbody = GetComponent<Rigidbody>();
         animator = transform.GetChild(0).GetComponent<Animator>();
+        
     }
 
     void Update()
     {
-        if (!SceneManager.GetActiveScene().name.Equals("SampleScene"))
-        {
-            gameObject.transform.GetChild(0).gameObject.SetActive(false);
-            this.enabled = false;
-        }
-
-        /*
-        if (Input.touchCount > 0)
-        {
-            Touch touch = Input.GetTouch(0);
-
-        }
-        */
-
-
+        if(joystick == null)
+            joystick = GameObject.FindGameObjectWithTag("Joystick").GetComponent<Joystick>();
+        
         if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -149,6 +138,9 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
+        if(joystick == null)
+            return;
+        
         rigidbody.velocity = new Vector3(speed * joystick.Horizontal, rigidbody.velocity.y, speed * joystick.Vertical);
 
         if (joystick.Vertical != 0 || joystick.Horizontal != 0)
