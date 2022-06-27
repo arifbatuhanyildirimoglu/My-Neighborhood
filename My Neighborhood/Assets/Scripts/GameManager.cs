@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour
     private GameState currentState;
     [SerializeField] private GameObject playerPrefab;
     [SerializeField] private GameObject spawnPos;
+    [SerializeField] private GameObject groceryPrefab;
+    [SerializeField] private GameObject grocerySpawnPos;
     
     void Start()
     {
@@ -19,8 +21,16 @@ public class GameManager : MonoBehaviour
             playerObject.GetComponent<PlayerController>().enabled = true;
             playerObject.transform.GetChild(0).gameObject.SetActive(true);
         }
-        
-        //Debug.Log("sa");
+
+        if (GameObject.FindGameObjectWithTag("Grocery") == null)
+            Instantiate(groceryPrefab, grocerySpawnPos.transform.position, Quaternion.identity);
+        else
+        {
+            GameObject groceryObject = GameObject.FindGameObjectWithTag("Grocery");
+            groceryObject.GetComponent<MeshRenderer>().enabled = true;
+            groceryObject.GetComponent<BoxCollider>().enabled = true;
+        }
+
 
     }
 

@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if(joystick == null)
+        if(joystick == null && !SceneManager.GetActiveScene().name.Equals("Grocery"))
             joystick = GameObject.FindGameObjectWithTag("Joystick").GetComponent<Joystick>();
         
         if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
             if (Physics.Raycast(ray, out hit) && UIManager.Instance.CurrentlyObservedBuilding == null)
             {
 
-                if (hit.transform.CompareTag("Building"))
+                if (hit.transform.CompareTag("Building") || hit.transform.CompareTag("Grocery"))
                 {
                     GameObject building = hit.transform.gameObject;
                     GameObject purchasingElements = buildingInfoBox.transform.GetChild(3).gameObject;
@@ -57,7 +57,7 @@ public class PlayerController : MonoBehaviour
 
 
                     string buildingName = building.gameObject.name;
-                    if (buildingName.Equals("Grocery") || buildingName.Equals("Store"))
+                    if (building.CompareTag("Grocery") || buildingName.Equals("Store"))
                     {
                         enterButton.SetActive(true);
                     }

@@ -57,6 +57,9 @@ public class UIManager : MonoBehaviour
         GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
         playerObject.GetComponent<PlayerController>().enabled = false;
         playerObject.transform.GetChild(0).gameObject.SetActive(false);
+
+        if (_currentlyObservedBuilding.name.Contains("Clone"))
+            _currentlyObservedBuilding.name = "Grocery";
         
         SceneManager.LoadScene(CurrentlyObservedBuilding.name);
 
