@@ -97,6 +97,8 @@
      <Compile Include="Assets\Scripts\GameCompany.cs" />
      <Compile Include="Assets\Scripts\Street.cs" />
      <Compile Include="Assets\DOTween\Modules\DOTweenModulePhysics2D.cs" />
+     <Compile Include="Assets\Scripts\GroceryManager.cs" />
+     <Compile Include="Assets\Scripts\GroceryController.cs" />
      <None Include="Assets\SupermarketInterior_v2\Shaders\sh_supermarket_advertising_anim_01.shader" />
      <None Include="Assets\DOTween\readme.txt" />
  <Reference Include="UnityEngine">

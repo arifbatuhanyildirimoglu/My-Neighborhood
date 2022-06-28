@@ -7463,7 +7463,7 @@ MonoBehaviour:
   infoPanel: {fileID: 1538452679}
   buildingInfoBox: {fileID: 362735004}
   budgetText: {fileID: 1944668163}
-  stockListDeneme: {fileID: 0}
+  stockList: {fileID: 0}
 --- !u!4 &2043178863
 Transform:
   m_ObjectHideFlags: 0
