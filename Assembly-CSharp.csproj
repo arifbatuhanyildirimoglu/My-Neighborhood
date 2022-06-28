@@ -58,6 +58,7 @@
      <Compile Include="Assets\Joystick Pack\Scripts\Base\Joystick.cs" />
      <Compile Include="Assets\DOTween\Modules\DOTweenModulePhysics.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
+     <Compile Include="Assets\Scripts\GroceryScripts\Door.cs" />
      <Compile Include="Assets\Scripts\Product\Carrot.cs" />
      <Compile Include="Assets\Scripts\Camera\StreetCameraController.cs" />
      <Compile Include="Assets\DOTween\Modules\DOTweenModuleEPOOutline.cs" />
@@ -69,11 +70,11 @@
      <Compile Include="Assets\Scripts\Buildings\InternationalBank.cs" />
      <Compile Include="Assets\Scripts\Buildings\Storage.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
-     <Compile Include="Assets\Scripts\Grocery\GroceryManager.cs" />
+     <Compile Include="Assets\Scripts\GroceryScripts\GroceryManager.cs" />
      <Compile Include="Assets\DOTween\Modules\DOTweenModuleUtils.cs" />
      <Compile Include="Assets\Scripts\Product\Egg.cs" />
      <Compile Include="Assets\Scripts\Buildings\Stadium.cs" />
-     <Compile Include="Assets\Scripts\Grocery\Customer.cs" />
+     <Compile Include="Assets\Scripts\GroceryScripts\Customer.cs" />
      <Compile Include="Assets\Scripts\UIManager.cs" />
      <Compile Include="Assets\Scripts\Buildings\House.cs" />
      <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
@@ -98,7 +99,6 @@
      <Compile Include="Assets\Scripts\Buildings\GameCompany.cs" />
      <Compile Include="Assets\Scripts\Street.cs" />
      <Compile Include="Assets\DOTween\Modules\DOTweenModulePhysics2D.cs" />
-     <Compile Include="Assets\Scripts\Grocery\Door.cs" />
      <None Include="Assets\SupermarketInterior_v2\Shaders\sh_supermarket_advertising_anim_01.shader" />
      <None Include="Assets\DOTween\readme.txt" />
  <Reference Include="UnityEngine">
