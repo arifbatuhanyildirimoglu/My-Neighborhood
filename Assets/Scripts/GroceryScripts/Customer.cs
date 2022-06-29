@@ -33,5 +33,15 @@ public class Customer : MonoBehaviour{
             animator.SetBool("isWalking", false);
         }
     }
+
+    public void CustomerGiveOrder()
+    {
+
+    }
+
+    public void CreateOrder()
+    {
+
+    }
     
 }

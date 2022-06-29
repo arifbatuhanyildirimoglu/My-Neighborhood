@@ -69,6 +69,7 @@ public class GroceryManager : MonoBehaviour
         customer.GoToTargetPosition(customerPosition.position);
         isCustomerComing = true;
         customer.IsCustomerGoingToGrocery = true;
+        //Customer dükkandan çýkarken isCustomerComing false olacak
     }
 
     IEnumerator SendDelayedCustomerToGrocery(){
