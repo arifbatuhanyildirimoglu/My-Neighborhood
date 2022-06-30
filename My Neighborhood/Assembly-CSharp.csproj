@@ -67,10 +67,12 @@
      <Compile Include="Assets\Scripts\Grocery.cs" />
      <Compile Include="Assets\Scripts\InternationalBank.cs" />
      <Compile Include="Assets\Scripts\Storage.cs" />
+     <Compile Include="Assets\Scripts\GroceryController.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\DOTween\Modules\DOTweenModuleUtils.cs" />
      <Compile Include="Assets\Scripts\Egg.cs" />
      <Compile Include="Assets\Scripts\Stadium.cs" />
+     <Compile Include="Assets\Scripts\GroceryManager.cs" />
      <Compile Include="Assets\Scripts\UIManager.cs" />
      <Compile Include="Assets\Scripts\House.cs" />
      <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
@@ -97,8 +99,9 @@
      <Compile Include="Assets\Scripts\GameCompany.cs" />
      <Compile Include="Assets\Scripts\Street.cs" />
      <Compile Include="Assets\DOTween\Modules\DOTweenModulePhysics2D.cs" />
-     <Compile Include="Assets\Scripts\GroceryManager.cs" />
-     <Compile Include="Assets\Scripts\GroceryController.cs" />
+     <Compile Include="Assets\Scripts\Customer.cs" />
+     <Compile Include="Assets\Scripts\Order.cs" />
+     <Compile Include="Assets\Scripts\OrderBag.cs" />
      <None Include="Assets\SupermarketInterior_v2\Shaders\sh_supermarket_advertising_anim_01.shader" />
      <None Include="Assets\DOTween\readme.txt" />
  <Reference Include="UnityEngine">

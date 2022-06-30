@@ -22,6 +22,7 @@ public class GroceryManager : MonoBehaviour
     [SerializeField] private GameObject carrotPrefab;
     [SerializeField] private GameObject colaPrefab;
     [SerializeField] private GameObject eggPrefab;
+    [SerializeField] private GameObject customerPrefab;
 
     [SerializeField] private GameObject appleCameraPosition;
     [SerializeField] private GameObject avocadoCameraPosition;
@@ -31,6 +32,10 @@ public class GroceryManager : MonoBehaviour
     [SerializeField] private GameObject colaCameraPosition;
     [SerializeField] private GameObject eggCameraPosition;
     
+    [SerializeField] private GameObject customerSpawnPosition;
+
+    private Order _currentOrder;
+    
     
     private GroceryManager(){}
     
@@ -39,6 +44,8 @@ public class GroceryManager : MonoBehaviour
     {
         Instance = this;
         DeployItems();
+        CreateCustomer();
+        _currentOrder = null;
     }
 
     // Update is called once per frame
@@ -82,9 +89,9 @@ public class GroceryManager : MonoBehaviour
                     
                     prefab = beerPrefab;
                     spawnPositions = beerSpawnPositions;
-                    quaternion = new Quaternion(0,0,-90,beerPrefab.transform.rotation.w);
+                    //quaternion = new Quaternion(0,0,-90,beerPrefab.transform.rotation.w);
                     
-                    InstantiateItem(prefab, spawnPositions, quaternion, item.Value);
+                    InstantiateItem(prefab, spawnPositions, Quaternion.identity, item.Value);
                     
                     break;
                 case "Canned Food":
@@ -153,6 +160,11 @@ public class GroceryManager : MonoBehaviour
         
     }
 
+    public void CreateCustomer()
+    {
+        GameObject customer = Instantiate(customerPrefab, customerSpawnPosition.transform.position, Quaternion.identity);
+    }
+
     public GameObject AppleCameraPosition => appleCameraPosition;
 
     public GameObject AvocadoCameraPosition => avocadoCameraPosition;
@@ -166,4 +178,10 @@ public class GroceryManager : MonoBehaviour
     public GameObject ColaCameraPosition => colaCameraPosition;
 
     public GameObject EggCameraPosition => eggCameraPosition;
+
+    public Order CurrentOrder
+    {
+        get => _currentOrder;
+        set => _currentOrder = value;
+    }
 }

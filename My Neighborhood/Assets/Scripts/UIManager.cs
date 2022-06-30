@@ -12,9 +12,17 @@ public class UIManager : MonoBehaviour
     public static UIManager Instance;
 
     [SerializeField] private GameObject infoPanel;
-    [SerializeField]private GameObject buildingInfoBox;
+    [SerializeField] private GameObject buildingInfoBox;
     [SerializeField] private Text budgetText;
     [SerializeField] private GameObject stockList;
+    [SerializeField] private GameObject orderList;
+    [SerializeField] private Sprite appleImage;
+    [SerializeField] private Sprite avocadoImage;
+    [SerializeField] private Sprite beerImage;
+    [SerializeField] private Sprite cannedFoodImage;
+    [SerializeField] private Sprite carrotImage;
+    [SerializeField] private Sprite colaImage;
+    [SerializeField] private Sprite eggImage;
 
     private GameObject _currentlyObservedBuilding;
 
@@ -79,7 +87,16 @@ public class UIManager : MonoBehaviour
     //Deneme amaçlı
     public void OnStockButtonClicked()
     {
-        stockList.SetActive(true);
+        stockList.SetActive(!stockList.activeInHierarchy);
+
+        for (int i = 0; i < Grocery.Instance.Stock.Count; i++)
+        {
+
+            stockList.transform.GetChild(0).GetChild(i).GetChild(0).GetComponent<Text>().text =
+                Grocery.Instance.Stock.ElementAt(i).Value.ToString();
+
+        }
+        
     }
 
     public void OnExitButtonClicked()
@@ -96,10 +113,6 @@ public class UIManager : MonoBehaviour
         mainCamera.transform.DOMove(GroceryManager.Instance.AppleCameraPosition.transform.position, 1f);
         mainCamera.transform.DORotateQuaternion(GroceryManager.Instance.AppleCameraPosition.transform.rotation, 1f);
         
-        /*
-        Camera.main.transform.position = GroceryManager.Instance.AppleCameraPosition.transform.position;
-        Camera.main.transform.rotation = GroceryManager.Instance.AppleCameraPosition.transform.rotation;
-        */
     }
 
     public void OnAvocadoImageClicked()
@@ -148,5 +161,70 @@ public class UIManager : MonoBehaviour
 
         mainCamera.transform.DOMove(GroceryManager.Instance.EggCameraPosition.transform.position, 1f);
         mainCamera.transform.DORotateQuaternion(GroceryManager.Instance.EggCameraPosition.transform.rotation, 1f);
+    }
+
+    public void OnOrderButtonClicked()
+    {
+        
+        orderList.SetActive(!orderList.activeInHierarchy);
+
+        GameObject content = orderList.transform.GetChild(0).gameObject;
+        GameObject infoText = content.transform.GetChild(content.transform.childCount - 2).gameObject;
+
+        if (GroceryManager.Instance.CurrentOrder == null)
+        {
+            infoText.SetActive(true);
+        }
+        else
+        {
+            infoText.SetActive(false);
+            
+            int itemCount = GroceryManager.Instance.CurrentOrder.Content.Count;
+            
+            for (int i = 0; i < itemCount; i++)
+            {
+                GameObject image = content.transform.GetChild(i).gameObject;
+                Text amountText = image.transform.GetChild(0).gameObject.GetComponent<Text>();
+                Text orderPriceText = content.transform.GetChild(content.transform.childCount - 1).gameObject
+                    .GetComponent<Text>();
+                string name = GroceryManager.Instance.CurrentOrder.Content.ElementAt(i).Key.name;
+                Sprite desiredImage = null;
+
+                switch (name)
+                {
+               
+                    case "Apple":
+                        desiredImage = appleImage;
+                        break;
+                    case "Avocado":
+                        desiredImage = avocadoImage;
+                        break;
+                    case "Beer":
+                        desiredImage = beerImage;
+                        break;
+                    case "Canned Food":
+                        desiredImage = cannedFoodImage;
+                        break;
+                    case "Carrot":
+                        desiredImage = carrotImage;
+                        break;
+                    case "Cola":
+                        desiredImage = colaImage;
+                        break;
+                    case "Egg":
+                        desiredImage = eggImage;
+                        break;
+                
+                }
+            
+                image.SetActive(true);
+                image.GetComponent<Image>().sprite = desiredImage;
+                amountText.text = GroceryManager.Instance.CurrentOrder.Content.ElementAt(i).Value.ToString();
+                orderPriceText.gameObject.SetActive(true);
+                orderPriceText.text = GroceryManager.Instance.CurrentOrder.Price.ToString();
+            }
+            
+        }
+        
     }
 }
