@@ -23,7 +23,7 @@ public class Player : MonoBehaviour
         
         Instance = this;
         
-        _budget = 15000;
+        _budget = 150000;
     }
 
     void Update()

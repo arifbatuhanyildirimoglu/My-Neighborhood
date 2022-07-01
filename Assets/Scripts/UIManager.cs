@@ -10,6 +10,7 @@ public class UIManager : MonoBehaviour
 
     [SerializeField] private GameObject infoPanel;
     [SerializeField]private GameObject buildingInfoBox;
+    [SerializeField]private GameObject achievementBox;
     [SerializeField] private Text budgetText;
 
     private GameObject _currentlyObservedBuilding;

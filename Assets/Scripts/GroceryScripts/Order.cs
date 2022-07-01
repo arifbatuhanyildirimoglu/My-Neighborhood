@@ -19,7 +19,7 @@ public class Order : MonoBehaviour
     {
         
     }
-    //7 ürün 6 farklı order olacak
+    //7 urun 6 farkli order olacak
 
     public void CreateOrder()
     {
@@ -34,7 +34,7 @@ public class Order : MonoBehaviour
 
         int random = Random.Range(0, index);
         randomNumber = numberList[random];
-        orderList.Keys. = items[randomNumber];
+        //orderList.Keys. = items[randomNumber];
         numberList.Remove(random);
         index--;
     }
