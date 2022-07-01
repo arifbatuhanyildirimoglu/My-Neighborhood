@@ -42,8 +42,10 @@ public class GroceryController : MonoBehaviour
         //currentOrder'daki keylerin isimleri ile orderBag'teki contentin keyi aynı olmak zorunda
         //o an basılan item'ın ismi alınır Apple (clone) ise apple olarak alınır ve önceki value'suna 1 eklenir
 
-        string name = hit.transform.gameObject.name.Substring(0, hit.transform.gameObject.name.IndexOf("(") - 2);
+        string name = hit.transform.gameObject.name.Substring(0, hit.transform.gameObject.name.IndexOf("("));
         int value = 0;
+        
+        Debug.Log(name);
         
         GameObject key = GameObject.Find(name);
 

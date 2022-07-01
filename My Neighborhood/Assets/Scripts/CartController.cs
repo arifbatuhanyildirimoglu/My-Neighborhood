@@ -72,6 +72,13 @@ public class CartController : MonoBehaviour
         }
 
         StoreManager.Instance.ItemList.Clear();
+
+        foreach (GameObject slot in StoreManager.Instance.CartSlots)
+        {
+            if(slot.transform.childCount > 0)
+                Destroy(slot.transform.GetChild(0).gameObject);
+        }
+        
     }
 
     private void AddItemToCart(RaycastHit hit)

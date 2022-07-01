@@ -7464,6 +7464,14 @@ MonoBehaviour:
   buildingInfoBox: {fileID: 362735004}
   budgetText: {fileID: 1944668163}
   stockList: {fileID: 0}
+  orderList: {fileID: 0}
+  appleImage: {fileID: 0}
+  avocadoImage: {fileID: 0}
+  beerImage: {fileID: 0}
+  cannedFoodImage: {fileID: 0}
+  carrotImage: {fileID: 0}
+  colaImage: {fileID: 0}
+  eggImage: {fileID: 0}
 --- !u!4 &2043178863
 Transform:
   m_ObjectHideFlags: 0

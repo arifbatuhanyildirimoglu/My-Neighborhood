@@ -35,6 +35,7 @@ public class GroceryManager : MonoBehaviour
     [SerializeField] private GameObject customerSpawnPosition;
 
     private Order _currentOrder;
+    private GameObject _currentCustomer;
     
     
     private GroceryManager(){}
@@ -46,6 +47,7 @@ public class GroceryManager : MonoBehaviour
         DeployItems();
         CreateCustomer();
         _currentOrder = null;
+        _currentCustomer = null;
     }
 
     // Update is called once per frame
@@ -89,9 +91,9 @@ public class GroceryManager : MonoBehaviour
                     
                     prefab = beerPrefab;
                     spawnPositions = beerSpawnPositions;
-                    //quaternion = new Quaternion(0,0,-90,beerPrefab.transform.rotation.w);
+                    quaternion = new Quaternion(0,0,0,beerPrefab.transform.rotation.w);
                     
-                    InstantiateItem(prefab, spawnPositions, Quaternion.identity, item.Value);
+                    InstantiateItem(prefab, spawnPositions, quaternion, item.Value);
                     
                     break;
                 case "Canned Food":
@@ -162,7 +164,10 @@ public class GroceryManager : MonoBehaviour
 
     public void CreateCustomer()
     {
+        //TODO: Material ataması yapılacak.
+        
         GameObject customer = Instantiate(customerPrefab, customerSpawnPosition.transform.position, Quaternion.identity);
+        _currentCustomer = customer;
     }
 
     public GameObject AppleCameraPosition => appleCameraPosition;
@@ -183,5 +188,11 @@ public class GroceryManager : MonoBehaviour
     {
         get => _currentOrder;
         set => _currentOrder = value;
+    }
+
+    public GameObject CurrentCustomer
+    {
+        get => _currentCustomer;
+        set => _currentCustomer = value;
     }
 }

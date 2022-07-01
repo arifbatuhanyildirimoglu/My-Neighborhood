@@ -222,6 +222,8 @@ public class UIManager : MonoBehaviour
                 amountText.text = GroceryManager.Instance.CurrentOrder.Content.ElementAt(i).Value.ToString();
                 orderPriceText.gameObject.SetActive(true);
                 orderPriceText.text = GroceryManager.Instance.CurrentOrder.Price.ToString();
+                GameObject giveOrderButton = content.transform.GetChild(content.transform.childCount - 3).gameObject;
+                giveOrderButton.SetActive(true);
             }
             
         }

@@ -8,16 +8,14 @@ public class Order
     private Dictionary<GameObject, int> _content;
     private int _price;
     private float _duration;
-    private bool isDelivered;
-    private Customer _customer;
+    private bool _isCompleted;
 
     public Order()
     {
         _content = new Dictionary<GameObject, int>();
         _price = 0;
         _duration = Random.Range(15,35);
-        isDelivered = false;
-        _customer = null;
+        _isCompleted = false;
     }
     
     
@@ -50,15 +48,9 @@ public class Order
 
     public float Duration => _duration;
 
-    public bool IsDelivered
+    public bool IsCompleted
     {
-        get => isDelivered;
-        set => isDelivered = value;
-    }
-
-    public Customer Customer
-    {
-        get => _customer;
-        set => _customer = value;
+        get => _isCompleted;
+        set => _isCompleted = value;
     }
 }

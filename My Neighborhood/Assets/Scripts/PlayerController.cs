@@ -36,6 +36,7 @@ public class PlayerController : MonoBehaviour
                 if (hit.transform.CompareTag("Building") || hit.transform.CompareTag("Grocery"))
                 {
                     GameObject building = hit.transform.gameObject;
+                    Text moneyRate = buildingInfoBox.transform.GetChild(2).gameObject.GetComponent<Text>();
                     GameObject purchasingElements = buildingInfoBox.transform.GetChild(3).gameObject;
                     GameObject enterButton = buildingInfoBox.transform.GetChild(4).gameObject;
 
@@ -43,6 +44,9 @@ public class PlayerController : MonoBehaviour
 
                     buildingInfoBox.transform.GetChild(1).GetComponent<Text>().text =
                         building.GetComponent<Building>().Name;
+                    
+                    moneyRate.text = building.GetComponent<Building>().Amount + "$/" +
+                                     building.GetComponent<Building>().Duration + "s";
 
                     if (!building.GetComponent<Building>().IsOwned)
                     {

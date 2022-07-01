@@ -6,7 +6,6 @@ using UnityEngine;
 
 public class Customer : MonoBehaviour
 {
-
     private Vector3[] _path;
     private Animator _animator;
     private GameObject _apple;
@@ -16,10 +15,14 @@ public class Customer : MonoBehaviour
     private GameObject _carrot;
     private GameObject _cola;
     private GameObject _egg;
+
+    private Order _order;
     
     // Start is called before the first frame update
     void Start()
     {
+        GroceryManager.Instance.CurrentCustomer = this.gameObject;
+        
         _path = new Vector3[4];
         _animator = GetComponent<Animator>();
         
@@ -65,10 +68,10 @@ public class Customer : MonoBehaviour
         _animator.SetTrigger("giveOrder");
 
         Order order = new Order();
-        order.Customer = this;
         CreateOrderContent(order);
 
         GroceryManager.Instance.CurrentOrder = order;
+        _order = order;
     }
 
     void CreateOrderContent(Order order)
@@ -96,5 +99,13 @@ public class Customer : MonoBehaviour
             order.Content.Add(item, randomAmount);
         }
 
+    }
+
+    void Leave()
+    {
+        if(!_order.IsCompleted)
+            return;
+        //eğer order completed ise geri git
+        
     }
 }
