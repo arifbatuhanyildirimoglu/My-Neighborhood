@@ -15788,6 +15788,14 @@ MonoBehaviour:
   colaCameraPosition: {fileID: 726409124}
   eggCameraPosition: {fileID: 529762175}
   customerSpawnPosition: {fileID: 635474507}
+  adventurerMat: {fileID: 2100000, guid: 5a93608b3e08a0f43b28b75f42ad8e06, type: 2}
+  manMat: {fileID: 2100000, guid: 8beec0b0169cc9a459e8012a8cb16edc, type: 2}
+  manAlternativeMat: {fileID: 2100000, guid: e74499fe3dcb6214a9940679f94cf087, type: 2}
+  orcMat: {fileID: 2100000, guid: c6813dda0c64cb34f8e4a9f4caf00c86, type: 2}
+  robotMat: {fileID: 2100000, guid: 0539cb79729d97f439f8eef69eeff41a, type: 2}
+  soldierMat: {fileID: 2100000, guid: 032ce1fbf28bb5c4aad37d379b23abd3, type: 2}
+  womanMat: {fileID: 2100000, guid: 78ca43db30d83f548b74cbf3dfb1e8aa, type: 2}
+  womanAlternativeMat: {fileID: 2100000, guid: d78ae75865bb57b4e84724e915e80669, type: 2}
 --- !u!4 &1731768232
 Transform:
   m_ObjectHideFlags: 0

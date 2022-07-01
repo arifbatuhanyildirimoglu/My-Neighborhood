@@ -34,6 +34,17 @@ public class GroceryManager : MonoBehaviour
     
     [SerializeField] private GameObject customerSpawnPosition;
 
+    [SerializeField] private Material adventurerMat;
+    [SerializeField] private Material manMat;
+    [SerializeField] private Material manAlternativeMat;
+    [SerializeField] private Material orcMat;
+    [SerializeField] private Material robotMat;
+    [SerializeField] private Material soldierMat;
+    [SerializeField] private Material womanMat;
+    [SerializeField] private Material womanAlternativeMat;
+
+    private List<Material> _customerMaterials;
+
     private Order _currentOrder;
     private GameObject _currentCustomer;
     
@@ -45,9 +56,20 @@ public class GroceryManager : MonoBehaviour
     {
         Instance = this;
         DeployItems();
-        CreateCustomer();
         _currentOrder = null;
         _currentCustomer = null;
+        _customerMaterials = new List<Material>
+        {
+            adventurerMat,
+            manMat,
+            manAlternativeMat,
+            orcMat,
+            robotMat,
+            soldierMat,
+            womanMat,
+            womanAlternativeMat
+        };
+        CreateCustomer();
     }
 
     // Update is called once per frame
@@ -164,10 +186,23 @@ public class GroceryManager : MonoBehaviour
 
     public void CreateCustomer()
     {
-        //TODO: Material ataması yapılacak.
-        
+
         GameObject customer = Instantiate(customerPrefab, customerSpawnPosition.transform.position, Quaternion.identity);
         _currentCustomer = customer;
+
+        SetCustomerMaterial(customer);
+    }
+
+    private void SetCustomerMaterial(GameObject customer)
+    {
+
+        for (int i = 0; i < 6; i++)
+        {
+            int randomIndex = Random.Range(0, 8);
+            
+            customer.transform.GetChild(i).GetComponent<SkinnedMeshRenderer>().material = _customerMaterials[randomIndex];
+        }
+        
     }
 
     public GameObject AppleCameraPosition => appleCameraPosition;

@@ -34,4 +34,6 @@ public class Street : MonoBehaviour
         _ownRate = rate;
         return _ownRate;
     }
+
+    public float OwnRate => _ownRate;
 }

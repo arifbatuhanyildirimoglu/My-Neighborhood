@@ -13,9 +13,19 @@ public class UIManager : MonoBehaviour
 
     [SerializeField] private GameObject infoPanel;
     [SerializeField] private GameObject buildingInfoBox;
-    [SerializeField] private Text budgetText;
     [SerializeField] private GameObject stockList;
     [SerializeField] private GameObject orderList;
+    [SerializeField] private GameObject pausePanel;
+    [SerializeField] private GameObject achievementsPanel;
+    [SerializeField] private GameObject lightningStreet;
+    [SerializeField] private GameObject attackStreet;
+    [SerializeField] private GameObject youngStreet;
+
+    [SerializeField] private Text budgetText;
+    [SerializeField] private Text lightningStreetRateText;
+    [SerializeField] private Text attackStreetRateText;
+    [SerializeField] private Text youngStreetRateText;
+    
     [SerializeField] private Sprite appleImage;
     [SerializeField] private Sprite avocadoImage;
     [SerializeField] private Sprite beerImage;
@@ -23,6 +33,10 @@ public class UIManager : MonoBehaviour
     [SerializeField] private Sprite carrotImage;
     [SerializeField] private Sprite colaImage;
     [SerializeField] private Sprite eggImage;
+
+    [SerializeField] private Slider lightningStreetSlider;
+    [SerializeField] private Slider attackStreetSlider;
+    [SerializeField] private Slider youngStreetSlider;
 
     private GameObject _currentlyObservedBuilding;
 
@@ -228,5 +242,46 @@ public class UIManager : MonoBehaviour
             
         }
         
+    }
+
+    public void OnPauseButtonClicked()
+    {
+        GameManager.Instance.CurrentState = GameState.Pause;
+        pausePanel.SetActive(true);
+        Time.timeScale = 0;
+
+    }
+
+    public void OnAchievementsButtonClicked()
+    {
+        
+        //TODO: Achievements panelini göster
+        //TODO: pause panelini kapat.
+        pausePanel.SetActive(false);
+        achievementsPanel.SetActive(true);
+        //TODO: sliderlar ve rate textler update edilecek.
+        lightningStreetSlider.value = lightningStreet.gameObject.GetComponent<Street>().OwnRate / 100;
+        lightningStreetRateText.text = lightningStreet.gameObject.GetComponent<Street>().OwnRate + "%";
+        
+        attackStreetSlider.value = attackStreet.gameObject.GetComponent<Street>().OwnRate / 100;
+        attackStreetRateText.text = attackStreet.gameObject.GetComponent<Street>().OwnRate + "%";
+
+        youngStreetSlider.value = youngStreet.gameObject.GetComponent<Street>().OwnRate / 100;
+        youngStreetRateText.text = youngStreet.gameObject.GetComponent<Street>().OwnRate + "%";
+
+    }
+
+    public void OnContinueButtonClicked()
+    {
+        GameManager.Instance.CurrentState = GameState.Gameplay;
+        pausePanel.SetActive(false);
+        Time.timeScale = 1;
+
+    }
+
+    public void OnGoBackButtonClicked()
+    {
+        achievementsPanel.SetActive(false);
+        pausePanel.SetActive(true);
     }
 }

@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+
+    public static GameManager Instance;
+    
     private GameState currentState;
     [SerializeField] private GameObject playerPrefab;
     [SerializeField] private GameObject spawnPos;
     [SerializeField] private GameObject groceryPrefab;
     [SerializeField] private GameObject grocerySpawnPos;
     
+    private GameManager(){}
+    
     void Start()
     {
+        Instance = this;
         //DontDestroyOnLoad(this);
+        currentState = GameState.Gameplay;
+        
         if(GameObject.FindGameObjectWithTag("Player") == null)
             Instantiate(playerPrefab, spawnPos.transform.position, Quaternion.identity);
         else
@@ -36,6 +44,12 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+    }
+
+    public GameState CurrentState
+    {
+        get => currentState;
+        set => currentState = value;
     }
 }
 

@@ -19,11 +19,24 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if(joystick == null && !SceneManager.GetActiveScene().name.Equals("Grocery"))
+        if (GameManager.Instance.CurrentState != GameState.Gameplay)
+        {
+            joystick.gameObject.SetActive(false);
+            return;
+        }
+
+
+        if (joystick == null && !SceneManager.GetActiveScene().name.Equals("Grocery"))
+        {
             joystick = GameObject.FindGameObjectWithTag("Joystick").GetComponent<Joystick>();
+            joystick.gameObject.SetActive(true);
+        }
+            
         
         if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
         {
+            joystick.gameObject.SetActive(true);
+            
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
 
