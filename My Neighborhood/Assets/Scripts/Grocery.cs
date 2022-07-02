@@ -39,12 +39,14 @@ public class Grocery : Building
             gameObject.GetComponent<MeshRenderer>().enabled = false;
             gameObject.GetComponent<BoxCollider>().enabled = false;
         }
-        
+
+        /*
         if (isOwned && !isMakingMoney)
         {
             isMakingMoney = true;
             StartCoroutine(MakeMoney(duration, amount));
         } 
+        */
     }
 
     private void AddToStock(string itemName, int amount)
@@ -63,17 +65,7 @@ public class Grocery : Building
         }
         
     }
-
-    private void UpdateMoneyRate()
-    {
-        
-        //itemların miktarı sıfır oldukça helen parayı düşür
-        //her sıfır için -1.5 mesela
-        
-        
-        
-    }
-
+    
     public Dictionary<string, int> Stock
     {
         get => _stock;

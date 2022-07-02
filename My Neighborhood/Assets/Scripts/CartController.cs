@@ -61,6 +61,8 @@ public class CartController : MonoBehaviour
         if (StoreManager.Instance.ItemList.Count == 0)
             return;
 
+        int itemListPrice = 0;
+        
         foreach (KeyValuePair<string, int> keyValuePair in StoreManager.Instance.ItemList)
         {
             int stockValue = 0;
@@ -73,9 +75,36 @@ public class CartController : MonoBehaviour
                     break;
                 }
             }
-
+            
             Grocery.Instance.Stock.Remove(keyValuePair.Key);
             Grocery.Instance.Stock.Add(keyValuePair.Key, stockValue + itemListValue);
+
+            switch (keyValuePair.Key)
+            {
+                case "Apple":
+                    itemListPrice += 5;
+                    break;
+                case "Avocado":
+                    itemListPrice += 10;
+                    break;
+                case "Beer":
+                    itemListPrice += 25;
+                    break;
+                case "Canned Food":
+                    itemListPrice += 15;
+                    break;
+                case "Carrot":
+                    itemListPrice += 7;
+                    break;
+                case "Cola":
+                    itemListPrice += 17;
+                    break;
+                case "Egg":
+                    itemListPrice += 3;
+                    break;
+            }
+            
+            Player.Instance.Budget -= itemListPrice;
         }
 
         StoreManager.Instance.ItemList.Clear();
@@ -85,7 +114,7 @@ public class CartController : MonoBehaviour
             if(slot.transform.childCount > 0)
                 Destroy(slot.transform.GetChild(0).gameObject);
         }
-        
+
     }
 
     private void AddItemToCart(RaycastHit hit)

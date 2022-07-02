@@ -1,4 +1,5 @@
 using System.Collections;
+using DG.Tweening;
 using UnityEngine;
 
 public abstract class Building : MonoBehaviour
@@ -9,6 +10,7 @@ public abstract class Building : MonoBehaviour
     protected bool isMakingMoney;
     protected float duration;
     protected float amount;
+    [SerializeField] private GameObject money;
 
     protected IEnumerator MakeMoney(float duration, float amount)
     {
@@ -16,7 +18,10 @@ public abstract class Building : MonoBehaviour
         {
             yield return new WaitForSeconds(duration);
             Player.Instance.Budget += amount;
-            //TODO: para çıkarıp ekranın sağ üstüne ekleme animasyonunu oynat
+            GameObject instantiatedMoney = Instantiate(money, transform.position,
+                Quaternion.LookRotation(Camera.main.transform.position));
+            instantiatedMoney.transform.DOMove(Player.Instance.transform.position, 0.3f)
+                .OnComplete(() => Destroy(instantiatedMoney));
         }
     }
 

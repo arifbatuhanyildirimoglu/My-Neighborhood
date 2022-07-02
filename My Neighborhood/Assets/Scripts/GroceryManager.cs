@@ -33,6 +33,7 @@ public class GroceryManager : MonoBehaviour
     [SerializeField] private GameObject eggCameraPosition;
     
     [SerializeField] private GameObject customerSpawnPosition;
+    [SerializeField] private GameObject lookAt;
 
     [SerializeField] private Material adventurerMat;
     [SerializeField] private Material manMat;
@@ -230,4 +231,6 @@ public class GroceryManager : MonoBehaviour
         get => _currentCustomer;
         set => _currentCustomer = value;
     }
+
+    public GameObject LookAt => lookAt;
 }

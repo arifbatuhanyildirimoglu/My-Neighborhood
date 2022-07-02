@@ -70,9 +70,11 @@ public class UIManager : MonoBehaviour
     {
 
         GameObject purchasingElements = buildingInfoBox.transform.GetChild(3).gameObject;
-        
-        if(Player.Instance.Purchase(CurrentlyObservedBuilding.GetComponent<Building>()))
+
+        if (Player.Instance.Purchase(CurrentlyObservedBuilding.GetComponent<Building>()))
             purchasingElements.SetActive(false);
+        
+            
         
     }
 
@@ -283,5 +285,13 @@ public class UIManager : MonoBehaviour
     {
         achievementsPanel.SetActive(false);
         pausePanel.SetActive(true);
+    }
+
+    public void OnCashoutButtonClicked()
+    {
+        Camera mainCamera = Camera.main;
+
+        mainCamera.transform.DOMove(GroceryManager.Instance.LookAt.transform.position, 1f);
+        mainCamera.transform.DORotateQuaternion(GroceryManager.Instance.LookAt.transform.rotation, 1f);
     }
 }
