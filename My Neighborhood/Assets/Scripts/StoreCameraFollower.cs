@@ -18,6 +18,6 @@ public class StoreCameraFollower : MonoBehaviour
     {
         
         transform.position = target.position;
-        transform.rotation = Quaternion.LookRotation(-target.forward);
+        //transform.rotation = Quaternion.LookRotation(-target.forward);
     }
 }

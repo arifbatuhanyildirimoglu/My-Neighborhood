@@ -2311,6 +2311,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 443674, guid: 0273f3f4d8ab9f340ae696c1799afa16, type: 3}
   m_PrefabInstance: {fileID: 160297668}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &160297670 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 184630, guid: 0273f3f4d8ab9f340ae696c1799afa16, type: 3}
+  m_PrefabInstance: {fileID: 160297668}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &160297671
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160297670}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.390289, y: 2.447403, z: 0.11486335}
+  m_Center: {x: 1.7538791, y: 1.2237015, z: 0.0049447343}
 --- !u!1001 &164123332
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3007,7 +3025,7 @@ Transform:
   - {fileID: 638180591}
   - {fileID: 1290524401}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &194000919 stripped
 Transform:
@@ -5467,7 +5485,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &390283975
 PrefabInstance:
@@ -10404,7 +10422,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1001 &708318216
 PrefabInstance:
@@ -11302,7 +11320,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &761923294
 PrefabInstance:
@@ -12908,7 +12926,7 @@ Transform:
   - {fileID: 1617198431}
   - {fileID: 1781236476}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &892609225
 PrefabInstance:
@@ -13842,12 +13860,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.16212901, y: 0.00016554893, z: -0.0010075838, w: 0.9867691}
-  m_LocalPosition: {x: -5, y: 1.9, z: 2.9}
+  m_LocalRotation: {x: 0.0010075838, y: -0.9867691, z: 0.16212901, w: 0.00016554893}
+  m_LocalPosition: {x: 0, y: 1.65, z: 1.0999999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_Father: {fileID: 2000226878}
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 18.661, y: 0, z: -0.117}
 --- !u!114 &963194229
 MonoBehaviour:
@@ -24530,7 +24548,7 @@ Transform:
   - {fileID: 959017130}
   - {fileID: 1692632771}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1728073101
 PrefabInstance:
@@ -28665,8 +28683,9 @@ Transform:
   - {fileID: 6038010}
   - {fileID: 1774496358}
   - {fileID: 856544143}
+  - {fileID: 963194228}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &2000510436
 GameObject:
@@ -30693,7 +30712,7 @@ Transform:
   - {fileID: 1114347568}
   - {fileID: 1032709465}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2144088103
 PrefabInstance:
@@ -30877,7 +30896,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2114146642536874721
 MonoBehaviour:
@@ -30893,9 +30912,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   infoPanel: {fileID: 0}
   buildingInfoBox: {fileID: 0}
-  budgetText: {fileID: 1944668163}
   stockList: {fileID: 0}
   orderList: {fileID: 0}
+  pausePanel: {fileID: 0}
+  achievementsPanel: {fileID: 0}
+  lightningStreet: {fileID: 0}
+  attackStreet: {fileID: 0}
+  youngStreet: {fileID: 0}
+  budgetText: {fileID: 1944668163}
+  lightningStreetRateText: {fileID: 0}
+  attackStreetRateText: {fileID: 0}
+  youngStreetRateText: {fileID: 0}
   appleImage: {fileID: 0}
   avocadoImage: {fileID: 0}
   beerImage: {fileID: 0}
@@ -30903,6 +30930,9 @@ MonoBehaviour:
   carrotImage: {fileID: 0}
   colaImage: {fileID: 0}
   eggImage: {fileID: 0}
+  lightningStreetSlider: {fileID: 0}
+  attackStreetSlider: {fileID: 0}
+  youngStreetSlider: {fileID: 0}
 --- !u!1 &2114146642536874722
 GameObject:
   m_ObjectHideFlags: 0
@@ -31360,7 +31390,7 @@ Transform:
   - {fileID: 2855174268130987899}
   - {fileID: 2855174268130987903}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!4 &2855174268130987845
 Transform:

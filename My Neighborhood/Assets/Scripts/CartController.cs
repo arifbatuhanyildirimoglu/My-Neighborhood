@@ -47,6 +47,13 @@ public class CartController : MonoBehaviour
 
         if (joystick.Vertical > 0)
             transform.position += -transform.forward * joystick.Vertical * _speed * Time.deltaTime;
+        
+        /*foreach (Touch touch in Input.touches){
+            if (touch.tapCount == 2) {
+                Camera.main.transform.DORotate()
+            }    
+        }*/
+        
     }
 
     private void MakePayment()
