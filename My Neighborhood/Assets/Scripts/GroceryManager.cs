@@ -114,9 +114,8 @@ public class GroceryManager : MonoBehaviour
                     
                     prefab = beerPrefab;
                     spawnPositions = beerSpawnPositions;
-                    quaternion = new Quaternion(0,0,0,beerPrefab.transform.rotation.w);
                     
-                    InstantiateItem(prefab, spawnPositions, quaternion, item.Value);
+                    InstantiateItem(prefab, spawnPositions, Quaternion.identity, item.Value);
                     
                     break;
                 case "Canned Food":

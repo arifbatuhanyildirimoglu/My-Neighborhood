@@ -15,7 +15,7 @@ public class OrderBag : MonoBehaviour
     private void Start()
     {
         _content = new Dictionary<GameObject, int>();
-        _isAbleToDeliver = false;
+        _isAbleToDeliver = true;
     }
 
     private void Update()

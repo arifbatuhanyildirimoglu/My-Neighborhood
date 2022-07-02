@@ -17,7 +17,7 @@ public class Street : MonoBehaviour
         CalculateOwnRate();
     }
 
-    private float CalculateOwnRate()
+    public float CalculateOwnRate()
     {
 
         int owned = 0;
@@ -29,6 +29,7 @@ public class Street : MonoBehaviour
                 owned++;
 
         }
+        Debug.Log(owned);
 
         float rate = owned / buildings.Count * 100;
         _ownRate = rate;

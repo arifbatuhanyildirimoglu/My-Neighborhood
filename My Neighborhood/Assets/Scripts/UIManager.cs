@@ -262,14 +262,14 @@ public class UIManager : MonoBehaviour
         pausePanel.SetActive(false);
         achievementsPanel.SetActive(true);
         //TODO: sliderlar ve rate textler update edilecek.
-        lightningStreetSlider.value = lightningStreet.gameObject.GetComponent<Street>().OwnRate / 100;
-        lightningStreetRateText.text = lightningStreet.gameObject.GetComponent<Street>().OwnRate + "%";
+        lightningStreetSlider.value = lightningStreet.gameObject.GetComponent<Street>().CalculateOwnRate() / 100;
+        lightningStreetRateText.text = lightningStreet.gameObject.GetComponent<Street>().CalculateOwnRate() + "%";
         
-        attackStreetSlider.value = attackStreet.gameObject.GetComponent<Street>().OwnRate / 100;
-        attackStreetRateText.text = attackStreet.gameObject.GetComponent<Street>().OwnRate + "%";
+        attackStreetSlider.value = attackStreet.gameObject.GetComponent<Street>().CalculateOwnRate() / 100;
+        attackStreetRateText.text = attackStreet.gameObject.GetComponent<Street>().CalculateOwnRate() + "%";
 
-        youngStreetSlider.value = youngStreet.gameObject.GetComponent<Street>().OwnRate / 100;
-        youngStreetRateText.text = youngStreet.gameObject.GetComponent<Street>().OwnRate + "%";
+        youngStreetSlider.value = youngStreet.gameObject.GetComponent<Street>().CalculateOwnRate() / 100;
+        youngStreetRateText.text = youngStreet.gameObject.GetComponent<Street>().CalculateOwnRate() + "%";
 
     }
 

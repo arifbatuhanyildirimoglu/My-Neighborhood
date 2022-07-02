@@ -47,13 +47,12 @@ public class CartController : MonoBehaviour
 
         if (joystick.Vertical > 0)
             transform.position += -transform.forward * joystick.Vertical * _speed * Time.deltaTime;
-        
+
         /*foreach (Touch touch in Input.touches){
             if (touch.tapCount == 2) {
                 Camera.main.transform.DORotate()
             }    
         }*/
-        
     }
 
     private void MakePayment()
@@ -62,7 +61,7 @@ public class CartController : MonoBehaviour
             return;
 
         int itemListPrice = 0;
-        
+
         foreach (KeyValuePair<string, int> keyValuePair in StoreManager.Instance.ItemList)
         {
             int stockValue = 0;
@@ -75,35 +74,35 @@ public class CartController : MonoBehaviour
                     break;
                 }
             }
-            
+
             Grocery.Instance.Stock.Remove(keyValuePair.Key);
             Grocery.Instance.Stock.Add(keyValuePair.Key, stockValue + itemListValue);
 
             switch (keyValuePair.Key)
             {
                 case "Apple":
-                    itemListPrice += 5;
+                    itemListPrice += 5 * itemListValue;
                     break;
                 case "Avocado":
-                    itemListPrice += 10;
+                    itemListPrice += 10 * itemListValue;
                     break;
                 case "Beer":
-                    itemListPrice += 25;
+                    itemListPrice += 25 * itemListValue;
                     break;
                 case "Canned Food":
-                    itemListPrice += 15;
+                    itemListPrice += 15 * itemListValue;
                     break;
                 case "Carrot":
-                    itemListPrice += 7;
+                    itemListPrice += 7 * itemListValue;
                     break;
                 case "Cola":
-                    itemListPrice += 17;
+                    itemListPrice += 17 * itemListValue;
                     break;
                 case "Egg":
-                    itemListPrice += 3;
+                    itemListPrice += 3 * itemListValue;
                     break;
             }
-            
+
             Player.Instance.Budget -= itemListPrice;
         }
 
@@ -111,10 +110,9 @@ public class CartController : MonoBehaviour
 
         foreach (GameObject slot in StoreManager.Instance.CartSlots)
         {
-            if(slot.transform.childCount > 0)
+            if (slot.transform.childCount > 0)
                 Destroy(slot.transform.GetChild(0).gameObject);
         }
-
     }
 
     private void AddItemToCart(RaycastHit hit)
@@ -124,26 +122,24 @@ public class CartController : MonoBehaviour
 
         foreach (GameObject slot in StoreManager.Instance.CartSlots)
         {
-
             if (slot.transform.childCount == 0)
             {
                 isCartNotFull = true;
             }
-            
+
             if (slot.transform.childCount == 0)
             {
                 item.transform.position = slot.transform.position;
                 item.transform.SetParent(slot.transform);
                 item.GetComponent<Item>().IsDeployedToCart = true;
             }
-            
         }
 
         if (!isCartNotFull)
         {
             //TODO: daha fazla item alamazsınız.
         }
-        
+
         if (item.GetComponent<Item>().IsDeployedToCart)
         {
             string itemName;
@@ -156,7 +152,7 @@ public class CartController : MonoBehaviour
             {
                 itemName = item.name;
             }
-            
+
             if (!StoreManager.Instance.ItemList.ContainsKey(itemName))
             {
                 StoreManager.Instance.ItemList.Add(itemName, 1);
@@ -175,6 +171,5 @@ public class CartController : MonoBehaviour
                 }
             }
         }
-        
     }
 }
